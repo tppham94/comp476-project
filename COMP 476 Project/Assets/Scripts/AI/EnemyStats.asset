@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement_speed: 1
   look_range: 40
-  look_sphere_cast_radius: 10
+  look_sphere_cast_radius: 40
   maximum_velocity: 10
   attack_range: 1
   attack_rate: 1

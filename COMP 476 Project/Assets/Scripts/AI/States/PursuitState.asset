@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3944581a4103ce54686c9a9bc9e45848, type: 3}
-  m_Name: WanderState
+  m_Name: PursuitState
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 972f1917190d1ad4682f5cf199216c30, type: 2}
+  - {fileID: 11400000, guid: ea4b9632190758e4283b412ca357ddda, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: acf858444a52654428998e818d7da561, type: 2}
-    true_state: {fileID: 11400000, guid: 73ace5bf608e92441ae2c90b0ad4bf73, type: 2}
-    false_state: {fileID: 11400000, guid: 3564749865bb55244b918cbc6c48c3e6, type: 2}
-  sceneGizmoColor: {r: 0.039443612, g: 1, b: 0, a: 1}
+  - decision: {fileID: 11400000, guid: a2c93d6fb90eb1448baf6531d8ba075e, type: 2}
+    true_state: {fileID: 11400000, guid: 3564749865bb55244b918cbc6c48c3e6, type: 2}
+    false_state: {fileID: 11400000, guid: a9bcd5aa7434b4c43b6011825ef955d9, type: 2}
+  sceneGizmoColor: {r: 1, g: 0, b: 0, a: 1}
