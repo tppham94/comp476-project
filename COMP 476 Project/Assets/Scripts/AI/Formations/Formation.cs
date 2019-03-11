@@ -10,8 +10,8 @@ public class Formation : ScriptableObject
 
 
    
-    public GameObject GenerateMarker(Object original, int offset_index, Quaternion rot, Transform parent)
+    public GameObject GenerateMarker(Object original, Vector3 pos, Quaternion rot, Transform parent)
     {
-        return Instantiate(original, offset_from_lead[offset_index], rot, parent) as GameObject;     
+        return Instantiate(original, pos, rot, parent) as GameObject;     
     }
 }

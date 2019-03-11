@@ -45,7 +45,7 @@ public class SteeringArriveAction : Action
     {
         // Check for target dist from arrival radius
         Vector3 direction = controller.target.transform.position - controller.transform.position;
-        Debug.Log(controller.gameObject.name + ": " + controller.current_vel);
+       // Debug.Log(controller.gameObject.name + ": " + controller.current_vel);
         float distance = (direction).magnitude;
 
         if (distance < controller.enemy_stats.arrival_radius)

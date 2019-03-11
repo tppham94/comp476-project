@@ -694,7 +694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962299165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -9, y: 0, z: 249}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2029160542}
@@ -718,6 +718,7 @@ MonoBehaviour:
   current_formation: {fileID: 11400000, guid: 93d6c2abaddb59e42a78899cfc7090f2, type: 2}
   v_formation: {fileID: 0}
   squad_target: {fileID: 2107861721}
+  markers: []
   leader: {fileID: 2029160541}
   leader_stat: {fileID: 11400000, guid: e5196063e07049c4ca4b15f101a787ac, type: 2}
   goon_stats: {fileID: 11400000, guid: 462f9016b7bb36840b7071b60f681310, type: 2}
