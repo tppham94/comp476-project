@@ -6,7 +6,7 @@ using UnityEngine;
 public class Formation : ScriptableObject
 {
     public Vector3 []offset_from_lead;
-    public bool[] taken;
+    public bool[] taken; //left there for now. Might use if we want units to go for the nearest marker. otherwise, useless 
 
 
    

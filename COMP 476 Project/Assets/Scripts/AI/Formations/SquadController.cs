@@ -4,7 +4,15 @@ using UnityEngine;
 public class SquadController : MonoBehaviour
 {
     public Formation current_formation;
-    public Formation v_formation;
+    /*
+     * For convention
+     * The index in the formation represents the number of units that are not leaders.
+     * For example, for an array a_f of size 3
+     * a_f[2]: leader + 2 goons
+     * a_f[1]: leader + 1 goon
+     * a_f[0]: leader
+     * */
+    public Formation []available_formations;
     public Transform squad_target;
     [SerializeField] private GameObject[] markers;
     [SerializeField]private EnemyStateController leader;
@@ -14,6 +22,8 @@ public class SquadController : MonoBehaviour
     {
         leader.target = squad_target;
         leader.enemy_stats = leader_stat;
+        if (available_formations.Length > 1) current_formation = available_formations[available_formations.Length - 1];
+        Debug.Log(available_formations.Length);
         RefreshCurrentUnits();
         UpdateUnitTargets();
     }
@@ -22,12 +32,20 @@ public class SquadController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            RefreshCurrentUnits();
-            UpdateUnitTargets();
-
+            //RefreshCurrentUnits();
+            //UpdateUnitTargets();
+            UpdateFormation();
         }
     }
 
+    //Picks next formation of a unit dies. The idea is to call this before destroying an enemy
+    public void UpdateFormation()
+    {
+        RefreshCurrentUnits();
+        current_formation = available_formations[units.Count];
+        if (units.Count == 0 && leader == null) Destroy(gameObject); 
+        UpdateUnitTargets();
+    }
     void UpdateUnitTargets()
     {
       GameObject  empty = new GameObject();
@@ -35,7 +53,6 @@ public class SquadController : MonoBehaviour
         {
             for(int i = 0; i < markers.Length; i++)
             {
-                Debug.Log("Ye");
                 Destroy(markers[i]);
             }
         }
@@ -52,6 +69,12 @@ public class SquadController : MonoBehaviour
     
     void RefreshCurrentUnits()
     {
+        if (leader == null && units!=null && units.Count > 0)
+        {
+            leader = units[0];
+            leader.target = squad_target;
+            leader.enemy_stats = leader_stat;
+        }
         units = new List<EnemyStateController>();
         EnemyStateController currentsc;
 
