@@ -22,6 +22,9 @@ public class StateController : MonoBehaviour
         {
             Gizmos.color = current_state.sceneGizmoColor;
             Gizmos.DrawWireSphere(transform.position, enemy_stats.look_sphere_cast_radius);
+
+           
+
         }
     }
 

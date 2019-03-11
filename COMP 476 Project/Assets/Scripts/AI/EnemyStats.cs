@@ -17,5 +17,17 @@ public class EnemyStats : ScriptableObject
 
     public float search_duration = 4.0f;
     public float searching_turn_speed = 120.0f;
+
+    //for steering arrive
+    public float slowdown_radius = 2f;
+    public float arrival_radius = 4f;
+    public float maximum_acceleration = 5f;
+    public float time_to_target = .15f;
+
+    //turning arrive
+    public float maximum_angular_velocity = 10f;
+    public float maximum_angular_acceleration = 5f;
+    public float angular_slowdown = 90f;
+    public float angular_arrival = 5f;
 }
 
