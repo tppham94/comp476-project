@@ -5,9 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Arrive", menuName = "AI/Actions/ArriveAction")]
 public class SteeringArriveAction : Action
 {
- 
-
-    
     public override void Act(StateController controller)
     {
         EnemyStateController esc;
@@ -44,8 +41,7 @@ public class SteeringArriveAction : Action
     private void Arrive(EnemyStateController controller)
     {
         // Check for target dist from arrival radius
-        Vector3 direction = controller.target.transform.position - controller.transform.position;
-       // Debug.Log(controller.gameObject.name + ": " + controller.current_vel);
+    Vector3 direction = controller.target.transform.position - controller.transform.position;
         float distance = (direction).magnitude;
 
         if (distance < controller.enemy_stats.arrival_radius)

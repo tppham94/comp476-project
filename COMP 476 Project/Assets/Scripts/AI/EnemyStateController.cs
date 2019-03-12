@@ -11,5 +11,9 @@ public class EnemyStateController : StateController
     public float angular_accel = 0;
     public float goal_angular_vel = 0;
 
-
+    private void Update()
+    {
+        
+        current_state.UpdateState(this);
+    }
 }

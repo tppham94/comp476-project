@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class SquadController : MonoBehaviour
 {
     public Formation current_formation;
@@ -36,6 +37,7 @@ public class SquadController : MonoBehaviour
             //UpdateUnitTargets();
             UpdateFormation();
         }
+      
     }
 
     //Picks next formation of a unit dies. The idea is to call this before destroying an enemy
@@ -59,7 +61,6 @@ public class SquadController : MonoBehaviour
         markers = new GameObject[current_formation.offset_from_lead.Length];
         for(int i = 0; i < markers.Length; i++)
         {
-          //  markers[i] = current_formation.GenerateMarker(empty, (leader.transform.rotation *leader.transform.position) + current_formation.offset_from_lead[i], Quaternion.identity, leader.transform);
             markers[i] = current_formation.GenerateMarker(empty, (leader.transform.rotation  * current_formation.offset_from_lead[i])+leader.transform.position, Quaternion.identity, leader.transform);
             units[i].target = markers[i].transform;
         }
