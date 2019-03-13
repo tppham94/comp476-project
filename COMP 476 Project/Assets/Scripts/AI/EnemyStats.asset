@@ -22,7 +22,6 @@ MonoBehaviour:
   attack_damage: 50
   search_duration: 4
   searching_turn_speed: 120
-  fixed_accel: 25
   slowdown_radius: 100
   arrival_radius: 7
   maximum_acceleration: 50
@@ -31,3 +30,4 @@ MonoBehaviour:
   maximum_angular_acceleration: 30
   angular_slowdown: 20
   angular_arrival: 1
+  whisker_length: 25

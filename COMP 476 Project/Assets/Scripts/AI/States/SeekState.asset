@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3944581a4103ce54686c9a9bc9e45848, type: 3}
-  m_Name: ArriveState
+  m_Name: SeekState
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 09fff33f1e4c0d544b8b348da986bc8e, type: 2}
+  - {fileID: 11400000, guid: e4128a0792416344b90b6e94335b891e, type: 2}
   - {fileID: 11400000, guid: d386caa03bdd6b64292c6ad6e5510bd2, type: 2}
   transitions:
   - {fileID: 11400000, guid: 6d2d5adc6dc62774c87a2becf9ec9494, type: 2}
-  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  sceneGizmoColor: {r: 0.9811321, g: 0.45817015, b: 0.9589558, a: 1}

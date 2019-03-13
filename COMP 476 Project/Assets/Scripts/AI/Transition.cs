@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Transition
+[CreateAssetMenu(fileName = "Transition", menuName = "AI/Transition")]
+public   class Transition:ScriptableObject
 {
     public Decision decision;
     public State true_state;

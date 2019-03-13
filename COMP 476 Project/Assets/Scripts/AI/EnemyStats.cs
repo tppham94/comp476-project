@@ -29,5 +29,8 @@ public class EnemyStats : ScriptableObject
     public float maximum_angular_acceleration = 5f;
     public float angular_slowdown = 90f;
     public float angular_arrival = 5f;
+
+    //obstacle avoidance
+    public float whisker_length = 30f; //raycast distance
 }
 

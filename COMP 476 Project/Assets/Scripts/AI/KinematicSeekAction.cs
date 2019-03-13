@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName ="Seek",menuName = "AI/Actions/Seek")]
-public class SeekAction : Action
+[CreateAssetMenu(fileName = "KinematicSeek", menuName = "AI/Actions/KinematicSeek")]
+public class KinematicSeekAction : Action
 {
     public override void Act(StateController controller)
     {
@@ -18,34 +17,20 @@ public class SeekAction : Action
     }
 
     // Seek using Steering mode.
-    private void Seek(EnemyStateController controller,Vector3 targetpoint)
+    private void Seek(EnemyStateController controller, Vector3 targetpoint)
     {
         // Check for target dist from arrival radius
         Vector3 direction = targetpoint - controller.transform.position;
-        // Vector3 direction = controller.nav_agent.steeringTarget - controller.transform.position;
         float distance = (direction).magnitude;
-        if (distance < controller.enemy_stats.arrival_radius)
+        if (controller.current_vel.magnitude == 0)
         {
-            controller.current_vel = Vector3.zero;
-            controller.current_accel = Vector3.zero;
-
-            return;
-        }
-
-        //Set accel
-        controller.current_accel += direction.normalized * (controller.enemy_stats.maximum_acceleration) * Time.deltaTime;
-        //cap accel
-        if (controller.current_accel.magnitude > controller.enemy_stats.maximum_acceleration)
-        {
-            controller.current_accel.Normalize();
-            controller.current_accel *= controller.enemy_stats.maximum_acceleration;
-        }
-        controller.current_vel += (controller.current_accel * Time.deltaTime);
-        //cap vel
-        if (controller.current_vel.magnitude > controller.enemy_stats.maximum_velocity)
-        {
+            controller.current_vel = direction;
             controller.current_vel.Normalize();
             controller.current_vel *= controller.enemy_stats.maximum_velocity;
+        }
+        else
+        {
+            controller.current_vel = direction.normalized * controller.current_vel.magnitude;
         }
 
         Vector3 newpos = controller.transform.position + (controller.current_vel * Time.deltaTime);

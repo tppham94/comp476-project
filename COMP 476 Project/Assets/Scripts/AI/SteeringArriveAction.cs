@@ -13,6 +13,7 @@ public class SteeringArriveAction : Action
         {
             esc = controller as EnemyStateController;
             Arrive(esc);
+           
         }
     }
 

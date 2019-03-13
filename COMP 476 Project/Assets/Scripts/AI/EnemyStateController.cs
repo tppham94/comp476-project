@@ -17,6 +17,9 @@ public class EnemyStateController : StateController
     {
         
         current_state.UpdateState(this);
+        Debug.DrawRay(transform.position + (transform.rotation * new Vector3(2, 0.1f, 0)), Quaternion.Euler(0,20,0)*(transform.forward)*25, Color.green);
+        Debug.DrawRay(transform.position + (transform.rotation*new Vector3(-2, 0.1f, 0)), Quaternion.Euler(0, -20, 0) * (transform.forward)*25, Color.green);
+
     }
     private void OnDrawGizmos()
     {
@@ -24,6 +27,8 @@ public class EnemyStateController : StateController
         {
             Gizmos.color = current_state.sceneGizmoColor;
             Gizmos.DrawWireSphere(transform.position, enemy_stats.look_sphere_cast_radius);
+
+            Gizmos.DrawWireSphere(obstacle_normal, 4);
 
         }
     }
