@@ -13,37 +13,20 @@ public class SteeringArriveAction : Action
         {
             esc = controller as EnemyStateController;
             Arrive(esc);
-            LookWhereYoureGoing(esc);
         }
     }
-    private void LookWhereYoureGoing(EnemyStateController controller)
-    {
-        Vector3 direction = controller.current_vel.normalized;
 
-        float angle = Vector3.Angle(direction, controller.transform.forward);
-        if (angle < controller.enemy_stats.angular_arrival)
-        {
-            controller.angular_accel = 0;
-            controller.angular_vel = 0;
-            return;
-        }
-        controller.goal_angular_vel = (controller.enemy_stats.maximum_angular_velocity) * (angle / controller.enemy_stats.angular_slowdown);
-
-        controller.angular_accel = (controller.goal_angular_vel - controller.angular_vel) / controller.enemy_stats.time_to_target;
-        controller.angular_accel = (controller.angular_accel > controller.enemy_stats.maximum_angular_acceleration) ? controller.enemy_stats.maximum_angular_acceleration : controller.angular_accel;
-
-        controller.angular_vel += controller.angular_accel * Time.deltaTime;
-        controller.angular_vel = controller.angular_vel > controller.enemy_stats.maximum_angular_velocity ? controller.enemy_stats.maximum_angular_velocity : controller.angular_vel;
-
-        Quaternion align_target = Quaternion.LookRotation(direction, Vector3.up);
-        controller.transform.rotation = Quaternion.RotateTowards(controller.transform.rotation, align_target, controller.angular_vel);
-    }
     private void Arrive(EnemyStateController controller)
     {
+        Arrive(controller, controller.target.position);
+    }
+    //for if we want to go for a different point while maintaining target
+    private void Arrive(EnemyStateController controller,Vector3 targetpoint)
+    {
         // Check for target dist from arrival radius
-    Vector3 direction = controller.target.transform.position - controller.transform.position;
+         Vector3 direction = targetpoint - controller.transform.position;
+   // Vector3 direction = controller.nav_agent.steeringTarget - controller.transform.position;
         float distance = (direction).magnitude;
-
         if (distance < controller.enemy_stats.arrival_radius)
         {
             controller.current_vel = Vector3.zero;
