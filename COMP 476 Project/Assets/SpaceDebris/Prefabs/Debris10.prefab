@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4163438870503764}
   - component: {fileID: 65803133294225448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4701369496693052}
   - component: {fileID: 65740543680457736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4735519852713490}
   - component: {fileID: 65399375588973388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 4703431027377024}
   - component: {fileID: 33491281189958954}
   - component: {fileID: 23274345565803592}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Debris10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4532563904744222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

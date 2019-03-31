@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4653888359567994}
   - component: {fileID: 33810122332229480}
   - component: {fileID: 23385124438187234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AsteroidsWhite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

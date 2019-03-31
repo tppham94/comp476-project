@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4703625380936904}
   - component: {fileID: 65479187446313408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4343385969302682}
   - component: {fileID: 33173692721295012}
   - component: {fileID: 23534775548028200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

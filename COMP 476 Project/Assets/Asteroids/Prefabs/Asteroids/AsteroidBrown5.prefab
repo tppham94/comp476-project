@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4945662063421126}
   - component: {fileID: 33173571710384772}
   - component: {fileID: 23096004843222890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AsteroidBrown5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

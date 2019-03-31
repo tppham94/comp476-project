@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4733940754202790}
   - component: {fileID: 33721612419914630}
   - component: {fileID: 23312454780662450}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StationDebris5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 4203402121053702}
   - component: {fileID: 33893707785867620}
   - component: {fileID: 23664288424433000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipDebris4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

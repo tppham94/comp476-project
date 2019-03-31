@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4128887520558462}
   - component: {fileID: 33509757453511394}
   - component: {fileID: 23731539473504470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AsteroidsGrey5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
