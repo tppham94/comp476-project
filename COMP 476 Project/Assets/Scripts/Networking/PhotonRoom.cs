@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
@@ -32,6 +33,11 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private float at_max_player;
     private float time_to_start;
 
+    public GameObject lobby_go;
+    public GameObject room_go;
+    public Transform players_panel;
+    public GameObject player_listing_prefab;
+    public GameObject start_button;
 
     #endregion
 
@@ -94,7 +100,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         }
     }
 
-    void StartGame()
+    public void StartGame()
     {
         game_loaded = true;
         if(!PhotonNetwork.IsMasterClient)
@@ -152,7 +158,6 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private void RPC_CreatePlayer()
     {
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), transform.position, Quaternion.identity, 0);
-        PhotonNetwork.InstantiateSceneObject(Path.Combine("PhotonPrefabs", "Pokeballs"), transform.position, Quaternion.identity, 0);
     }
 
 
@@ -177,10 +182,19 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     {
         base.OnJoinedRoom();
         Debug.Log("We are in a room now");
+
+        lobby_go.SetActive(false);
+        room_go.SetActive(true);
+        if(PhotonNetwork.IsMasterClient)
+        {
+            start_button.SetActive(true);
+        }
+        ClearPlayerListings();
+        ListPlayers();
+
         photon_players = PhotonNetwork.PlayerList;
         players_in_room = photon_players.Length;
         my_number_in_room = players_in_room;
-        //PhotonNetwork.NickName = my_number_in_room.ToString();
 
         if(MultiplayerSetting.mp_setting.delayed_start)
         {
@@ -199,16 +213,18 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
                 PhotonNetwork.CurrentRoom.IsOpen = false;
             }
         }
-        else
-        {
-            StartGame();
-        }
+        //else
+        //{
+        //    StartGame();
+        //}
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         base.OnPlayerEnteredRoom(newPlayer);
         Debug.Log("A new player has joined the room");
+        ClearPlayerListings();
+        ListPlayers();
         photon_players = PhotonNetwork.PlayerList;
         players_in_room++;
         if(MultiplayerSetting.mp_setting.delayed_start)
@@ -234,7 +250,29 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     {
         Debug.Log(otherPlayer.NickName + " has left the game!");
         players_in_room--;
+        ClearPlayerListings();
+        ListPlayers();
     }
     #endregion
 
+    void ClearPlayerListings()
+    {
+        for(int i = players_panel.childCount - 1; i >= 0; i--)
+        {
+            Destroy(players_panel.GetChild(i).gameObject);
+        }
+    }
+
+    void ListPlayers()
+    {
+        if(PhotonNetwork.InRoom)
+        {
+            foreach(Player player in PhotonNetwork.PlayerList)
+            {
+                GameObject temp_listing = Instantiate(player_listing_prefab, players_panel);
+                Text temp_text = temp_listing.transform.GetChild(0).GetComponent<Text>();
+                temp_text.text = player.NickName;
+            }
+        }
+    }
 }
