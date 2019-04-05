@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3181351954878847265}
   - component: {fileID: 364228792718837164}
   - component: {fileID: 4463326074549504042}
+  - component: {fileID: 6771900555429057149}
   m_Layer: 0
   m_Name: ShipAvatar
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_LocalPosition: {x: -28.661896, y: -0.2781334, z: 4.3237514}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4796834407875355784}
+  - {fileID: 4800282908165043948}
   - {fileID: 419568388590853391}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,7 +52,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &373155388767272548
 MonoBehaviour:
@@ -118,6 +119,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   maxSpeed: 100
+--- !u!114 &6771900555429057149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444255205288435810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ba9182f943044489cebc1a03d7050c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicShotPrefab: {fileID: 152888, guid: 5624ee9da9d10514ea7b808e83979c85, type: 3}
+  shotCooldownTime: 1
 --- !u!1 &9109485218555972030
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,10 +222,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2444255205288435811}
     m_Modifications:
-    - target: {fileID: 1510364872509504, guid: d1cfaa622e7883042868382cc3263a17, type: 3}
-      propertyPath: m_Name
-      value: PlayerShip
-      objectReference: {fileID: 0}
     - target: {fileID: 4433942057210488, guid: d1cfaa622e7883042868382cc3263a17, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -255,9 +266,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1510364872509504, guid: d1cfaa622e7883042868382cc3263a17, type: 3}
+      propertyPath: m_Name
+      value: PlayerShip
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1cfaa622e7883042868382cc3263a17, type: 3}
---- !u!4 &4796834407875355784 stripped
+--- !u!4 &4800282908165043948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4433942057210488, guid: d1cfaa622e7883042868382cc3263a17,
     type: 3}
