@@ -14,8 +14,11 @@ public class ShipPlayer : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         int spawn_pos_pick = (PV.ViewID / 1000) - 1; // take the view id of the player and use it as spawn index position.
-        if(PV.IsMine)
+        Debug.LogWarning(spawn_pos_pick);
+        Debug.LogWarning("The coordinate for our spawn pos: " + GameSetup.GS.spawn_positions[spawn_pos_pick]);
+        if (PV.IsMine)
         {
+            Debug.LogWarning("The coordinate for our spawn pos: " + GameSetup.GS.spawn_positions[spawn_pos_pick]);
             my_ship = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "ShipAvatar"), GameSetup.GS.spawn_positions[spawn_pos_pick].position, GameSetup.GS.spawn_positions[spawn_pos_pick].rotation, 0);
         }
     }

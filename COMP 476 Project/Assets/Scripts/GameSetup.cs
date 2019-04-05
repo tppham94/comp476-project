@@ -25,4 +25,12 @@ public class GameSetup : MonoBehaviour
     {
         
     }
+
+    private void OnEnable()
+    {
+        if(GameSetup.GS == null)
+        {
+            GameSetup.GS = this;
+        }
+    }
 }
