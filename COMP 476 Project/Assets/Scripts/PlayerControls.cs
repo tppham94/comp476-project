@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-
+    private PhotonView PV;
     Rigidbody _rb;
     public float movementSpeed = 1;
     public float maxSpeed = 100;
@@ -13,12 +14,18 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        
-
+        PV = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        if(PV.IsMine)
+        {
+            InputMovement();
+        }
+    }
+    void InputMovement()
     {
         //Sets a max velocitty on ship
         _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, maxSpeed);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    public void OnClickPokemonPick(int which_ship)
+    public void OnClickShipPick(int which_ship)
     {
         if(PlayerInfo.PI != null)
         {
