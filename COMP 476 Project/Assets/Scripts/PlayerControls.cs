@@ -57,6 +57,10 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("Slow");
             _rb.velocity *= 0.99f;
         }
-           
+
+        // leave game
+        if (Input.GetKey(KeyCode.Escape))
+            GameSetup.GS.DisconnectPlayer();
+
     }
 }
