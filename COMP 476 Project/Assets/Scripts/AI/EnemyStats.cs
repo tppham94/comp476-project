@@ -35,6 +35,7 @@ public class EnemyStats : ScriptableObject
 
     //missiles
     public GameObject homing_missile_prefab;
+    public GameObject straight_missile_prefab;
      public float homing_missile_interval = 3f;
     public float straight_missile_interval = 1.5f;
 }
