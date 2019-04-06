@@ -51,6 +51,11 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey("e"))
             _rb.velocity += transform.right * movementSpeed;
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log("Control set to fire laser");
+            GetComponent<PlayerFireLazer>().fireLaser();
+        }
         //Slow down
         if (Input.GetKey("left shift"))
         {
