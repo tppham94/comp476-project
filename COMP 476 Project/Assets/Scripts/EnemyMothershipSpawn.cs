@@ -13,15 +13,13 @@ public class EnemyMothershipSpawn : MonoBehaviour
     public Transform spawnB;
 
     public GameObject Enemy1;
-    //public GameObject Enemy2;
+    //public GameObject Enemy2; //Add in 2nd type of enemy
 
-    // Start is called before the first frame update
     void Start()
     {
         spawnTimer = timeToSpawn;
     }
 
-    // Update is called once per frame
     void Update()
     {
         spawnTimer -= Time.deltaTime * numbPlayers;
