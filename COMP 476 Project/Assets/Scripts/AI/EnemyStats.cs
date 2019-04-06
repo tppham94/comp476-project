@@ -32,5 +32,11 @@ public class EnemyStats : ScriptableObject
 
     //obstacle avoidance
     public float whisker_length = 30f; //raycast distance
+
+    //missiles
+    public GameObject homing_missile_prefab;
+    public GameObject straight_missile_prefab;
+     public float homing_missile_interval = 3f;
+    public float straight_missile_interval = 1.5f;
 }
 

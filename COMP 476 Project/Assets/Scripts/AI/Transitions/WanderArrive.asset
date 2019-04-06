@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10adbec0e808744dad9fe50b8cbe8aa, type: 3}
+  m_Name: WanderArrive
+  m_EditorClassIdentifier: 
+  decision: {fileID: 11400000, guid: acf858444a52654428998e818d7da561, type: 2}
+  true_state: {fileID: 11400000, guid: 76e6cc4a664125e428fb700762a5d79f, type: 2}
+  false_state: {fileID: 11400000, guid: a9bcd5aa7434b4c43b6011825ef955d9, type: 2}
