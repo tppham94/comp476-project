@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &252
+--- !u!1 &107
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,13 +8,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 391}
-  - component: {fileID: 508}
-  - component: {fileID: 566}
-  - component: {fileID: 567}
-  - component: {fileID: 7669155123005309147}
-  - component: {fileID: 568}
-  - component: {fileID: 4327155035799021038}
+
+  - component: {fileID: 252}
+  - component: {fileID: 496}
+  - component: {fileID: 531}
+  - component: {fileID: 532}
+  - component: {fileID: 560}
+  - component: {fileID: 533}
+  - component: {fileID: 559}
+
   m_Layer: 0
   m_Name: ShipAvatar
   m_TagString: Untagged
@@ -22,28 +24,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &391
+--- !u!4 &252
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252}
+  m_GameObject: {fileID: 107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.661896, y: -0.2781334, z: 4.3237514}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 390}
+  - {fileID: 251}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &508
+--- !u!54 &496
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252}
+  m_GameObject: {fileID: 107}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -53,13 +55,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &566
+--- !u!114 &531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252}
+  m_GameObject: {fileID: 107}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -71,17 +73,17 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 567}
+  - {fileID: 532}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &567
+--- !u!114 &532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252}
+  m_GameObject: {fileID: 107}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
@@ -90,28 +92,28 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!114 &7669155123005309147
+--- !u!114 &560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252}
+  m_GameObject: {fileID: 107}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45064bd1deb5b4f498b70b16115124ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   my_ship: {fileID: 0}
-  my_camera: {fileID: 392}
+  my_camera: {fileID: 387}
   start_position: {fileID: 0}
---- !u!114 &568
+--- !u!114 &533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252}
+  m_GameObject: {fileID: 107}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c52c8714879a7f4bad4353d44b3e65f, type: 3}
@@ -119,20 +121,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   maxSpeed: 100
---- !u!114 &4327155035799021038
+
+  mouseSpeed: 6
+--- !u!114 &559
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252}
+
+  m_GameObject: {fileID: 107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f8ea5deab950445ab80df279a37c14, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ba9182f943044489cebc1a03d7050c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawndiff: 10
---- !u!1 &253
+  basicShotPrefab: {fileID: 152888, guid: 5624ee9da9d10514ea7b808e83979c85, type: 3}
+  shotCooldownTime: 1
+--- !u!1 &249
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,9 +148,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 390}
-  - component: {fileID: 392}
-  - component: {fileID: 510}
+  - component: {fileID: 251}
+  - component: {fileID: 387}
+  - component: {fileID: 502}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -150,27 +158,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &390
+--- !u!4 &251
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253}
+
+  m_GameObject: {fileID: 249}
   m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
   m_LocalPosition: {x: 0, y: 10, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 391}
+  m_Father: {fileID: 252}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
---- !u!20 &392
+--- !u!20 &387
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253}
+
+  m_GameObject: {fileID: 249}
+
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -206,13 +217,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &510
+--- !u!81 &502
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253}
+  m_GameObject: {fileID: 249}
   m_Enabled: 1
 --- !u!114 &6771900555429057149
 MonoBehaviour:
