@@ -27,7 +27,7 @@ public class PlayerShoot : MonoBehaviour
         else if (cooldown == true)
             shotCooldown -= Time.deltaTime;
 
-        else if ((Input.GetKey("space")) && (cooldown == false))
+        else if (((Input.GetKey("space")) || (Input.GetMouseButton(0))) && (cooldown == false))
         {
             Instantiate(basicShotPrefab, this.transform.position + (this.transform.forward * 5), this.transform.rotation);
             cooldown = true;
