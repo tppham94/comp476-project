@@ -12,7 +12,8 @@ public class PlayerControls : MonoBehaviour
 
     public float mouseSpeed = 6f;
     private float mouseX = 0f;
-
+    private float mouseY = 0f;
+    public float mouseYLimit = 45f;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +54,16 @@ public class PlayerControls : MonoBehaviour
         }*/
         //Rotate
         mouseX += mouseSpeed * Input.GetAxis("Mouse X");
-        transform.eulerAngles = new Vector3(0.0f, mouseX, 0.0f);
+        mouseY += mouseSpeed* Input.GetAxis("Mouse Y");
+        if(mouseY > mouseYLimit && mouseY > 0)
+        {
+            mouseY = mouseYLimit;
+        }else 
+            if(mouseY < -mouseYLimit && mouseY < 0)
+        {
+            mouseY = -mouseYLimit;
+        }
+        transform.eulerAngles = new Vector3(-mouseY, mouseX, 0.0f);
 
         //Slow down
         if (Input.GetKey("left shift"))

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc3fecaa185b3b542a61ac8e2b661f6b, type: 3}
-  m_Name: Non-Leader
+  m_Name: HomingMissile
   m_EditorClassIdentifier: 
   movement_speed: 1
   look_range: 40
@@ -22,18 +22,16 @@ MonoBehaviour:
   attack_damage: 50
   search_duration: 4
   searching_turn_speed: 120
-  slowdown_radius: 15
-  arrival_radius: 2
-  maximum_acceleration: 50
-  time_to_target: 0.05
+  slowdown_radius: 75
+  arrival_radius: 0.5
+  maximum_acceleration: 70
+  time_to_target: 0.1
   maximum_angular_velocity: 30
   maximum_angular_acceleration: 30
   angular_slowdown: 20
   angular_arrival: 1
-  whisker_length: 25
-  homing_missile_prefab: {fileID: 4332338638887966005, guid: 7c7c7dccacbb812428f29cfec77abd0c,
-    type: 3}
-  straight_missile_prefab: {fileID: 8919314020959483734, guid: 418fdf98d772de444b68cc6b4c4cbddf,
-    type: 3}
+  whisker_length: 10
+  homing_missile_prefab: {fileID: 0}
+  straight_missile_prefab: {fileID: 0}
   homing_missile_interval: 3
   straight_missile_interval: 1.5

@@ -7,11 +7,16 @@ public class LookDecision : Decision
 {
     public override bool Decide(StateController controller)
     {
-        bool target_visible = Look(controller);
+
+        EnemyStateController esc;
+        //  if (!(controller.GetType() == typeof(EnemyStateController))) return false;
+
+        esc = controller as EnemyStateController;
+        bool target_visible = Look(esc);
         return target_visible;
     }
 
-    private bool Look(StateController controller)
+    private bool Look(EnemyStateController controller)
     {
         RaycastHit hit;
         Debug.DrawRay(controller.transform.position, controller.transform.forward.normalized * controller.enemy_stats.look_range, Color.green);
@@ -21,6 +26,7 @@ public class LookDecision : Decision
         {
             Debug.Log(hit.collider.tag);
             controller.target = hit.transform;
+            controller.attack_target = hit.transform;
             return true;
         } else
         {
