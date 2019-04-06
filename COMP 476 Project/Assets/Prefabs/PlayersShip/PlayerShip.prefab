@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 4433942057210488}
   - component: {fileID: 33144904916599870}
   - component: {fileID: 23649099192709106}
+  - component: {fileID: 5193446615558794830}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -298,6 +299,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5193446615558794830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510364872509504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ba9182f943044489cebc1a03d7050c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicShotPrefab: {fileID: 152888, guid: 5624ee9da9d10514ea7b808e83979c85, type: 3}
+  shotCooldownTime: 1
 --- !u!1 &1692945755674982
 GameObject:
   m_ObjectHideFlags: 0
