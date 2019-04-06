@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "ShootMissile", menuName = "AI/Actions/ShootMissile")]
@@ -33,7 +34,7 @@ public class ShootMissileAction : Action
             if (homing)
             {
                 //SET TO PHOTONNETWORKINSTANTIATE
-                GameObject missile = Instantiate(esc.enemy_stats.homing_missile_prefab, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
+                GameObject missile = PhotonNetwork.Instantiate(esc.enemy_stats.homing_missile_prefab.name, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
                 EnemyStateController miss_script = missile.GetComponent<EnemyStateController>();
                 if (miss_script != null)
                 {
@@ -49,7 +50,7 @@ public class ShootMissileAction : Action
             else
             {
                 //SET TO PHOTONNETWORKINSTANTIATE
-                GameObject missile = Instantiate(esc.enemy_stats.straight_missile_prefab, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
+                GameObject missile = PhotonNetwork.Instantiate(esc.enemy_stats.straight_missile_prefab.name, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
 
                 esc.shoot_flag = false;
                 esc.shoot_timer = esc.enemy_stats.straight_missile_interval;
