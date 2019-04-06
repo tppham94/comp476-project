@@ -56,9 +56,16 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("Control set to fire laser");
             GetComponent<PlayerFireLazer>().fireLaser();
         }
+        //Slow down
+        if (Input.GetKey("left shift"))
+        {
+            Debug.Log("Slow");
+            _rb.velocity *= 0.99f;
+        }
 
         // leave game
         if (Input.GetKey(KeyCode.Escape))
             GameSetup.GS.DisconnectPlayer();
+
     }
 }
