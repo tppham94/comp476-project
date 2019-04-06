@@ -31,3 +31,5 @@ MonoBehaviour:
   angular_slowdown: 20
   angular_arrival: 1
   whisker_length: 25
+  homing_missile_prefab: {fileID: 4332338638887966005, guid: 7c7c7dccacbb812428f29cfec77abd0c,
+    type: 3}

@@ -15,14 +15,14 @@ MonoBehaviour:
   movement_speed: 1
   look_range: 40
   look_sphere_cast_radius: 40
-  maximum_velocity: 35
+  maximum_velocity: 50
   attack_range: 1
   attack_rate: 1
   attack_force: 15
   attack_damage: 50
   search_duration: 4
   searching_turn_speed: 120
-  slowdown_radius: 30
+  slowdown_radius: 75
   arrival_radius: 0
   maximum_acceleration: 70
   time_to_target: 0.1
@@ -31,3 +31,6 @@ MonoBehaviour:
   angular_slowdown: 20
   angular_arrival: 1
   whisker_length: 5
+  homing_missile_prefab: {fileID: 0}
+  homing_missile_interval: 3
+  straight_missile_interval: 1.5
