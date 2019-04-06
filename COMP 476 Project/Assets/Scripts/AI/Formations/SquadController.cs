@@ -24,6 +24,7 @@ public class SquadController : MonoBehaviour
         leader.target = squad_target;
         leader.enemy_stats = leader_stat;
         if (available_formations.Length > 1) current_formation = available_formations[available_formations.Length - 1];
+        
         RefreshCurrentUnits();
         UpdateUnitTargets();
     }

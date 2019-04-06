@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4332338638887966011}
   m_Layer: 0
   m_Name: HomingMissile
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,8 @@ MonoBehaviour:
   attack_target: {fileID: 0}
   obstacle_normal: {x: 0, y: 0, z: 0}
   can_attack: 0
-  homing_missile_prefab: {fileID: 0}
+  shoot_timer: 3
+  shoot_flag: 0
 --- !u!96 &4332338638887966011
 TrailRenderer:
   serializedVersion: 2

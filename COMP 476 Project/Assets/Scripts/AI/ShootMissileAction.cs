@@ -24,6 +24,7 @@ public class ShootMissileAction : Action
                     {
                         //miss_script.attack_target = esc.attack_target;
                         miss_script.target = esc.attack_target;
+                        if (esc.attack_target == null) miss_script.target = esc.target;
                         miss_script.current_vel = 3 * esc.current_vel;
                     }
                     esc.shoot_flag = false;

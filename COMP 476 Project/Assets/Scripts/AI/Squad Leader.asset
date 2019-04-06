@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement_speed: 1
   look_range: 40
-  look_sphere_cast_radius: 40
+  look_sphere_cast_radius: 5
   maximum_velocity: 50
   attack_range: 1
   attack_rate: 1
@@ -33,3 +33,5 @@ MonoBehaviour:
   whisker_length: 25
   homing_missile_prefab: {fileID: 4332338638887966005, guid: 7c7c7dccacbb812428f29cfec77abd0c,
     type: 3}
+  homing_missile_interval: 3
+  straight_missile_interval: 1.5

@@ -30,7 +30,7 @@ MonoBehaviour:
   maximum_angular_acceleration: 30
   angular_slowdown: 20
   angular_arrival: 1
-  whisker_length: 5
+  whisker_length: 10
   homing_missile_prefab: {fileID: 0}
   homing_missile_interval: 3
   straight_missile_interval: 1.5

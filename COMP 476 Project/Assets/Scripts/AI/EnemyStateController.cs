@@ -21,14 +21,14 @@ public class EnemyStateController : StateController
         UpdateShootTimer();
         Debug.DrawRay(transform.position + (transform.rotation * new Vector3(.5f, 0.1f, 0))*transform.localScale.x, Quaternion.Euler(0,20,0)*(transform.forward)*25, Color.green);
         Debug.DrawRay(transform.position + (transform.rotation*new Vector3(-.5f, 0.1f, 0)) * transform.localScale.x, Quaternion.Euler(0, -20, 0) * (transform.forward)*25, Color.green);
-
+        
     }
     private void OnDrawGizmos()
     {
         if (current_state != null)
         {
             Gizmos.color = current_state.sceneGizmoColor;
-            Gizmos.DrawWireSphere(transform.position, enemy_stats.look_sphere_cast_radius);
+            Gizmos.DrawWireSphere(transform.position, enemy_stats.look_range);
 
             Gizmos.DrawWireSphere(obstacle_normal, 4);
 

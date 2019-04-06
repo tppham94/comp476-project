@@ -40,6 +40,8 @@ public class State : ScriptableObject
                 target_state = transitions[i].false_state;
 
             }
+            Debug.Log(target_state);
+            if (target_state == null) continue;
             if(!target_state.StateName.Equals(StateName))
             {
                 controller.TransitionToState(target_state);

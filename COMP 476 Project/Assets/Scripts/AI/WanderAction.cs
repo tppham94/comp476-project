@@ -10,6 +10,7 @@ public class WanderAction : Action
     float angle;
     public override void Act(StateController controller)
     {
+
         Wander(controller);
     }
 
@@ -17,14 +18,15 @@ public class WanderAction : Action
     {
         float rotation_direction = Random.Range(-0.5f, 0.5f);
         angle = angle + maximum_rotation_velocity * rotation_direction * Time.deltaTime;
-        if(angle > 3.5f)
+        if(rotation_direction > 0)
         {
             angle = 3.5f;
-        } else if(angle < -3.5f)
+        } else if(rotation_direction  < 0)
         {
             angle = -3.5f;
         }
-        controller.transform.Rotate(0, angle, 0);
+
+        controller.transform.Rotate(0, maximum_rotation_velocity*angle, 0);
         Vector3 next_position = controller.transform.position + controller.enemy_stats.maximum_velocity * Time.deltaTime * controller.transform.forward.normalized;
         controller.transform.position = next_position;
         

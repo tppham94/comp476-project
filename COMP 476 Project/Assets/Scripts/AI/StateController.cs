@@ -30,6 +30,7 @@ public class StateController : MonoBehaviour
 
     public void TransitionToState(State next_state)
     {
+        if (next_state == null) return;
         if(next_state != remain_state)
         {
             current_state = next_state;
