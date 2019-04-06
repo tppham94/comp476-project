@@ -835,6 +835,8 @@ MonoBehaviour:
   spawn_positions:
   - {fileID: 955233834}
   - {fileID: 809774249}
+  - {fileID: 1332544189}
+  - {fileID: 1356445384}
 --- !u!114 &338686530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,8 +856,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 1
-  InstantiationId: 1
+  viewIdField: 2
+  InstantiationId: 2
   isRuntimeInstantiated: 0
 --- !u!1 &354611357 stripped
 GameObject:

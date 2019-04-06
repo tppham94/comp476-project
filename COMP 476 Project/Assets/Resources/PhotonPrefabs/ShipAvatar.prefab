@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_ship: {fileID: 0}
+  my_camera: {fileID: 6744907555580208411}
   start_position: {fileID: 0}
 --- !u!114 &4463326074549504042
 MonoBehaviour:
