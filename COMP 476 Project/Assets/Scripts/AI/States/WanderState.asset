@@ -15,7 +15,6 @@ MonoBehaviour:
   actions:
   - {fileID: 11400000, guid: 972f1917190d1ad4682f5cf199216c30, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: acf858444a52654428998e818d7da561, type: 2}
-    true_state: {fileID: 11400000, guid: 73ace5bf608e92441ae2c90b0ad4bf73, type: 2}
-    false_state: {fileID: 11400000, guid: 3564749865bb55244b918cbc6c48c3e6, type: 2}
+  - {fileID: 11400000, guid: a739ec6dd77c7904cae7301f916e25ca, type: 2}
   sceneGizmoColor: {r: 0.039443612, g: 1, b: 0, a: 1}
+  StateName: Wander

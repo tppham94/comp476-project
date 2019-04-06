@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "LookWhereYerGoin", menuName = "AI/Actions/LookAction")]
+[CreateAssetMenu(fileName = "LookAtTarget", menuName = "AI/Actions/LookTargetAction")]
 
-public class LookWhereYoureGoingAction : Action
+public class LookAtTarget : Action
 {
 
     public override void Act(StateController controller)
@@ -13,12 +13,14 @@ public class LookWhereYoureGoingAction : Action
         if (controller.target != null)
         {
             esc = controller as EnemyStateController;
-            LookWhereYoureGoing(esc);
+            if (esc.current_state.StateName.Equals("Arrive")|| esc.current_state.StateName.Equals("Seek")) Look(esc, esc.current_vel.normalized);
+            else if (esc.attack_target != null && esc.current_state.StateName.Equals("Attack")) Look(esc,
+                (esc.attack_target.transform.position-esc.transform.position).normalized);
         }
     }
-    private void LookWhereYoureGoing(EnemyStateController controller)
+    private void Look(EnemyStateController controller, Vector3 dir)
     {
-        Vector3 direction = controller.current_vel.normalized;
+        Vector3 direction = dir;
 
         float angle = Vector3.Angle(direction, controller.transform.forward);
         if (angle < controller.enemy_stats.angular_arrival)
