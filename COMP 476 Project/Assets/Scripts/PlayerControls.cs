@@ -50,5 +50,9 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKey("e"))
             _rb.velocity += transform.right * movementSpeed;
+
+        // leave game
+        if (Input.GetKey(KeyCode.Escape))
+            GameSetup.GS.DisconnectPlayer();
     }
 }
