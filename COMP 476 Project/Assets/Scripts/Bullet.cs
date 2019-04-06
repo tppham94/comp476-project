@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float destroyTimer = 5f;
     public float shotSpeed = 1f;
+    //public int thing;
 
 
     void Update()

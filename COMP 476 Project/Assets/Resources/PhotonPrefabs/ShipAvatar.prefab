@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7669155123005309147}
   - component: {fileID: 568}
   - component: {fileID: 4327155035799021038}
+  - component: {fileID: 339230342285111729}
   m_Layer: 0
   m_Name: ShipAvatar
   m_TagString: Untagged
@@ -119,7 +120,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   maxSpeed: 100
+  mouseSpeed: 6
 --- !u!114 &4327155035799021038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f8ea5deab950445ab80df279a37c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawndiff: 10
+  timeBetweenShots: 1
+--- !u!114 &339230342285111729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,10 +144,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f8ea5deab950445ab80df279a37c14, type: 3}
+  m_Script: {fileID: 11500000, guid: a5b1d120617f38e428391427f2489d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawndiff: 10
+  maxhealth: 1000
 --- !u!1 &253
 GameObject:
   m_ObjectHideFlags: 0

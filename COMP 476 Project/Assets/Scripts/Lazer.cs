@@ -23,7 +23,7 @@ public class Lazer : MonoBehaviourPun//, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Pew pew");
+        //Debug.Log("Pew pew");
         transform.position += transform.forward * speed * Time.deltaTime;
     }
 }

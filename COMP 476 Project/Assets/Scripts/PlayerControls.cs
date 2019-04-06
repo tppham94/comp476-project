@@ -47,11 +47,10 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey("e"))
             _rb.velocity += transform.right * movementSpeed;
 
-        if (Input.GetKey(KeyCode.Space))
+        /*if (Input.GetKey(KeyCode.Space))
         {
-            Debug.Log("Control set to fire laser");
             GetComponent<PlayerFireLazer>().fireLaser();
-        }
+        }*/
         //Rotate
         mouseX += mouseSpeed * Input.GetAxis("Mouse X");
         transform.eulerAngles = new Vector3(0.0f, mouseX, 0.0f);
