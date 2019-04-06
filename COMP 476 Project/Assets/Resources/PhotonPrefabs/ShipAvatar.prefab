@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 567}
   - component: {fileID: 565}
   - component: {fileID: 568}
+  - component: {fileID: 4327155035799021038}
   m_Layer: 0
   m_Name: ShipAvatar
   m_TagString: Untagged
@@ -118,6 +119,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   maxSpeed: 100
+--- !u!114 &4327155035799021038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f8ea5deab950445ab80df279a37c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawndiff: 3
 --- !u!1 &253
 GameObject:
   m_ObjectHideFlags: 0
