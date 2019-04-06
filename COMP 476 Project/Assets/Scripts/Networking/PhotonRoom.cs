@@ -49,7 +49,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
             PhotonRoom.room = this;
         }
         else
-        {
+        { 
             if (PhotonRoom.room != this)
             {
                 Destroy(PhotonRoom.room.gameObject);
@@ -253,6 +253,8 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         ClearPlayerListings();
         ListPlayers();
     }
+   
+    
     #endregion
 
     void ClearPlayerListings()
