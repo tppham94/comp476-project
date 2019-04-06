@@ -25,7 +25,7 @@ public class TakesDamage : MonoBehaviour
 
             if (health <= 0)
             {
-                gameObject.active = false;
+                noHealth();
             }
         }
     }
@@ -50,5 +50,10 @@ public class TakesDamage : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void noHealth()
+    {
+        gameObject.active = false;
     }
 }
