@@ -36,5 +36,7 @@ MonoBehaviour:
   - RPC_LoadedGameScene
   - RPC_addShip
   - RPC_AddShip
+  - MotherShipHit
+  - MotherShipHealth
   DisableAutoOpenWizard: 1
   ShowSettings: 1

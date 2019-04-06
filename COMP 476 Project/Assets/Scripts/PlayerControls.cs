@@ -10,6 +10,10 @@ public class PlayerControls : MonoBehaviour
     public float movementSpeed = 1;
     public float maxSpeed = 100;
 
+    public float mouseSpeed = 6f;
+    private float mouseX = 0f;
+    private float mouseY = 0f;
+    public float mouseYLimit = 45f;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,13 +41,6 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey("s"))
             _rb.velocity += transform.forward * -movementSpeed;
 
-        //Rotate
-        if (Input.GetKey("a"))
-            transform.Rotate(Vector3.down);
-
-        if (Input.GetKey("d"))
-            transform.Rotate(Vector3.up);
-
         //Strafe
         if (Input.GetKey("q"))
             _rb.velocity += -transform.right * movementSpeed;
@@ -56,12 +53,22 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("Control set to fire laser");
             GetComponent<PlayerFireLazer>().fireLaser();
         }
+        //Rotate
+        mouseX += mouseSpeed * Input.GetAxis("Mouse X");
+        mouseY += mouseSpeed* Input.GetAxis("Mouse Y");
+        if(mouseY > mouseYLimit && mouseY > 0)
+        {
+            mouseY = mouseYLimit;
+        }else 
+            if(mouseY < -mouseYLimit && mouseY < 0)
+        {
+            mouseY = -mouseYLimit;
+        }
+        transform.eulerAngles = new Vector3(-mouseY, mouseX, 0.0f);
+
         //Slow down
         if (Input.GetKey("left shift"))
-        {
-            Debug.Log("Slow");
             _rb.velocity *= 0.99f;
-        }
 
         // leave game
         if (Input.GetKey(KeyCode.Escape))
