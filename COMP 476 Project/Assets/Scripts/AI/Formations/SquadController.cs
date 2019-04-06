@@ -87,6 +87,7 @@ public class SquadController : MonoBehaviour
                 currentsc.enemy_stats = goon_stats;
                 units.Add(currentsc);
             }
+            currentsc.attack_target = squad_target;
         }
 
     }

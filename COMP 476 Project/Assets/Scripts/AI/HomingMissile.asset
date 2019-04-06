@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc3fecaa185b3b542a61ac8e2b661f6b, type: 3}
-  m_Name: EnemyStats
+  m_Name: HomingMissile
   m_EditorClassIdentifier: 
   movement_speed: 1
   look_range: 40
   look_sphere_cast_radius: 40
-  maximum_velocity: 50
+  maximum_velocity: 35
   attack_range: 1
   attack_rate: 1
   attack_force: 15
   attack_damage: 50
   search_duration: 4
   searching_turn_speed: 120
-  slowdown_radius: 100
-  arrival_radius: 7
-  maximum_acceleration: 50
-  time_to_target: 0.5
+  slowdown_radius: 30
+  arrival_radius: 0
+  maximum_acceleration: 70
+  time_to_target: 0.1
   maximum_angular_velocity: 30
   maximum_angular_acceleration: 30
   angular_slowdown: 20
   angular_arrival: 1
-  whisker_length: 25
+  whisker_length: 5
