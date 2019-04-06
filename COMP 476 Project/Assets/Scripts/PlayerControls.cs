@@ -50,5 +50,17 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKey("e"))
             _rb.velocity += transform.right * movementSpeed;
+
+        //Slow down
+        if (Input.GetKey("left shift"))
+        {
+            Debug.Log("Slow");
+            _rb.velocity *= 0.99f;
+        }
+
+        // leave game
+        if (Input.GetKey(KeyCode.Escape))
+            GameSetup.GS.DisconnectPlayer();
+
     }
 }
