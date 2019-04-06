@@ -18,4 +18,12 @@ public class Bullet : MonoBehaviour
 
         transform.position += transform.forward * shotSpeed;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "mothership")
+        {
+            collision.gameObject.GetComponent<EnemyMothershipHealth>().GetDamage();
+            Destroy(gameObject);
+        }
+    }
 }
