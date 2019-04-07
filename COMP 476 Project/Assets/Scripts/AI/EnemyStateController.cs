@@ -54,7 +54,6 @@ public class EnemyStateController : StateController
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.LogWarning("Booped");
 
         if (PhotonNetwork.IsMasterClient)
         {

@@ -21,6 +21,7 @@ public class EnemyBullet : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 //Damage player
+                Debug.LogWarning("COLLIDED WITH PLAYER");
                 PhotonNetwork.Destroy(this.gameObject);
             }
         }
