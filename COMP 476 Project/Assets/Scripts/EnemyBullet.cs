@@ -13,7 +13,6 @@ public class EnemyBullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.LogWarning("Booped");
 
         if (PhotonNetwork.IsMasterClient)
         {
@@ -21,7 +20,6 @@ public class EnemyBullet : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 //Damage player
-                Debug.LogWarning("COLLIDED WITH PLAYER");
                 PhotonNetwork.Destroy(this.gameObject);
             }
         }

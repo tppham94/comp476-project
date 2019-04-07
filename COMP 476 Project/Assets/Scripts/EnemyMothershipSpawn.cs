@@ -13,7 +13,7 @@ public class EnemyMothershipSpawn : MonoBehaviour
     public Transform spawnA;
     public Transform spawnB;
 
-    public GameObject Enemy1;
+    //public GameObject Enemy1;
     //public GameObject Enemy2; //Add in 2nd type of enemy
 
     void Start()
@@ -25,10 +25,10 @@ public class EnemyMothershipSpawn : MonoBehaviour
     {
         spawnTimer -= Time.deltaTime / numbPlayers;
         
-        if (spawnTimer < 0)
+        if (spawnTimer < 0 && PhotonNetwork.IsMasterClient)
         {
-            GameObject a = PhotonNetwork.Instantiate(Enemy1.name, spawnA.position, Quaternion.identity);
-            GameObject b = PhotonNetwork.Instantiate(Enemy1.name, spawnB.position, Quaternion.identity);
+            GameObject a = PhotonNetwork.Instantiate("Squad", spawnA.position, Quaternion.identity);
+            GameObject b = PhotonNetwork.Instantiate("Squad", spawnB.position, Quaternion.identity);
 
             a.name = "A";
             b.name = "B";
