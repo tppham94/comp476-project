@@ -120,6 +120,7 @@ MonoBehaviour:
   movementSpeed: 1
   maxSpeed: 100
   mouseSpeed: 6
+  mouseYLimit: 45
 --- !u!114 &559
 MonoBehaviour:
   m_ObjectHideFlags: 0
