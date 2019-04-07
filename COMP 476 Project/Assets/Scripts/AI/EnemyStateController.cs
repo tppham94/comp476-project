@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,9 +15,11 @@ public class EnemyStateController : StateController
     public Transform attack_target = null;
     public Vector3 obstacle_normal = Vector3.zero;
     public bool can_attack = true;
+
+  
     private void Update()
     {
-        
+      
         current_state.UpdateState(this);
         UpdateShootTimer();
         Debug.DrawRay(transform.position + (transform.rotation * new Vector3(.5f, 0.1f, 0))*transform.localScale.x, Quaternion.Euler(0,20,0)*(transform.forward)*25, Color.green);
@@ -46,6 +49,20 @@ public class EnemyStateController : StateController
         if(!shoot_flag && shoot_timer <=0)
         {
             shoot_flag = true;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+
+            if (collision.gameObject.tag=="Player")
+            {
+                //Damage player
+                PhotonNetwork.Destroy(this.gameObject);
+            }
         }
     }
 

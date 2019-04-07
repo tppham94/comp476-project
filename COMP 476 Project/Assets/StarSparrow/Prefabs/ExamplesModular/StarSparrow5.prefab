@@ -466,11 +466,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4866f59cc8591d449d668ab15229f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSpawn: 15
+  timeToSpawn: 20
   numbPlayers: 1
   spawnA: {fileID: 7624960434226697334}
   spawnB: {fileID: 3760764712434206757}
-  Enemy1: {fileID: 1082774190486484364, guid: 7f81813e1bcdce14b82f559004091ba5, type: 3}
+  Enemy1: {fileID: 695497920184599640, guid: 13a79e44d6497d54eb55e5216ea6c727, type: 3}
 --- !u!114 &1371965333161681160
 MonoBehaviour:
   m_ObjectHideFlags: 0

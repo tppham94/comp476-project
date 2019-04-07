@@ -42,10 +42,10 @@ public class PlayerControls : MonoBehaviour
             _rb.velocity += transform.forward * -movementSpeed;
 
         //Strafe
-        if (Input.GetKey("q"))
+        if (Input.GetKey("a"))
             _rb.velocity += -transform.right * movementSpeed;
 
-        if (Input.GetKey("e"))
+        if (Input.GetKey("d"))
             _rb.velocity += transform.right * movementSpeed;
 
         /*if (Input.GetKey(KeyCode.Space))

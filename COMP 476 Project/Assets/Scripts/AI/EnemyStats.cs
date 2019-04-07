@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu (menuName = "AI/EnemyStats")]
 public class EnemyStats : ScriptableObject
 {
+    public int max_hp = 3;
+
     public float movement_speed = 1.0f;
     public float look_range = 40.0f;
     public float look_sphere_cast_radius = 1.0f;
