@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     public float shotSpeed = 1f;
     //public int thing;
 
-
     void Update()
     {
         destroyTimer -= Time.deltaTime;
@@ -24,6 +23,19 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyMothershipHealth>().GetDamage();
             Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+
+
+            EnemyHealth esc_script = collision.gameObject.GetComponentInParent<EnemyHealth>();
+            if (esc_script != null)
+            {
+                Debug.LogWarning("Emmie");
+                esc_script.TakeDamage();
+            }
+            Destroy(gameObject);
+
         }
     }
 }

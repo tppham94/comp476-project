@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMothershipSpawn : MonoBehaviour
 {
-    public float timeToSpawn = 15f;
+    public float timeToSpawn = 20f;
     public int numbPlayers = 1;
 
     private float spawnTimer;
@@ -17,27 +18,27 @@ public class EnemyMothershipSpawn : MonoBehaviour
 
     void Start()
     {
-        spawnTimer = timeToSpawn;
+        spawnTimer = 0;
     }
 
     void Update()
     {
-        spawnTimer -= Time.deltaTime * numbPlayers;
+        spawnTimer -= Time.deltaTime / numbPlayers;
         
         if (spawnTimer < 0)
         {
-            GameObject a = Instantiate(Enemy1, spawnA.position, Quaternion.identity);
-            GameObject b = Instantiate(Enemy1, spawnB.position, Quaternion.identity);
+            GameObject a = PhotonNetwork.Instantiate(Enemy1.name, spawnA.position, Quaternion.identity);
+            GameObject b = PhotonNetwork.Instantiate(Enemy1.name, spawnB.position, Quaternion.identity);
 
             a.name = "A";
             b.name = "B";
 
-            a.GetComponent<EnemyStateController>().target = GameObject.FindGameObjectWithTag("Player").transform;
-            b.GetComponent<EnemyStateController>().target = GameObject.FindGameObjectWithTag("Player").transform;
+            a.GetComponent<SquadController>().squad_target = GameObject.FindGameObjectWithTag("Player").transform;
+            b.GetComponent<SquadController>().squad_target = GameObject.FindGameObjectWithTag("Player").transform;
 
             Debug.Log("Instantiate spawns");
 
-            spawnTimer = timeToSpawn;
+            spawnTimer = Mathf.Infinity;
         }
     }
 }

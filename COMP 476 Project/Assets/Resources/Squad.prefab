@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 695497920184599643}
   - component: {fileID: 695497920184599642}
+  - component: {fileID: 6633662265873600810}
   m_Layer: 0
   m_Name: Squad
   m_TagString: Enemy
@@ -58,6 +59,28 @@ MonoBehaviour:
   leader: {fileID: 5951187541594120090}
   leader_stat: {fileID: 11400000, guid: e5196063e07049c4ca4b15f101a787ac, type: 2}
   goon_stats: {fileID: 11400000, guid: 462f9016b7bb36840b7071b60f681310, type: 2}
+--- !u!114 &6633662265873600810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695497920184599640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 0
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &695497918931133954
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3fecaa185b3b542a61ac8e2b661f6b, type: 3}
   m_Name: Squad Leader
   m_EditorClassIdentifier: 
+  max_hp: 3
   movement_speed: 1
   look_range: 40
   look_sphere_cast_radius: 5
@@ -35,5 +36,5 @@ MonoBehaviour:
     type: 3}
   straight_missile_prefab: {fileID: 8919314020959483734, guid: 418fdf98d772de444b68cc6b4c4cbddf,
     type: 3}
-  homing_missile_interval: 3
+  homing_missile_interval: 10
   straight_missile_interval: 1.5

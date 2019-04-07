@@ -28,11 +28,14 @@ public class SquadController : MonoBehaviour
         RefreshCurrentUnits();
         UpdateUnitTargets();
     }
-
+    float update_rate = 2f;
+    float update_timer = 2f;
  void Update()
     {
-        if (Input.GetKeyDown("space"))
+        update_timer -= Time.deltaTime;
+        if (update_timer <=0)
         {
+            update_timer = update_rate;
             //RefreshCurrentUnits();
             //UpdateUnitTargets();
             UpdateFormation();
