@@ -16,7 +16,19 @@ public class EnemyStateController : StateController
     public Vector3 obstacle_normal = Vector3.zero;
     public bool can_attack = true;
 
-  
+
+
+    AudioSource audioSource;
+    public AudioClip laserHit;
+    public AudioClip fireLaser;
+    public AudioClip shipDestroy;
+
+    public void Start()
+    {
+
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
       
@@ -61,6 +73,7 @@ public class EnemyStateController : StateController
             if (collision.gameObject.tag=="Player")
             {
                 //Damage player
+                audioSource.PlayOneShot(laserHit);
                 PhotonNetwork.Destroy(this.gameObject);
             }
         }

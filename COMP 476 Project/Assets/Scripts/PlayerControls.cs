@@ -14,11 +14,23 @@ public class PlayerControls : MonoBehaviour
     private float mouseX = 0f;
     private float mouseY = 0f;
     public float mouseYLimit = 45f;
+
+    //public AudioClip thrusters;
+    public AudioClip collision;
+    AudioSource audioSource;
+    float audiotimer = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
+
+        if (PV.IsMine)
+        {
+            GetComponent<AudioListener>().enabled = true;
+        }
     }
 
     // Update is called once per frame
@@ -47,6 +59,32 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKey("d"))
             _rb.velocity += transform.right * movementSpeed;
+
+        if(Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+                
+            }
+            audiotimer = 1f;
+            audioSource.volume = audiotimer;
+
+        }
+        else
+        {
+            audiotimer -= Time.deltaTime;
+            audioSource.volume = audiotimer;
+            if (audiotimer < 0)
+            {
+                audioSource.Stop();
+            }
+            //if(_rb.velocity.magnitude < maxSpeed/4)//arbitrary amount? needs testing?
+            //{
+            //    audioSource.Stop();
+            //}
+                
+        }
 
         /*if (Input.GetKey(KeyCode.Space))
         {
