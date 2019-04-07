@@ -6,7 +6,20 @@ public class Bullet : MonoBehaviour
 {
     public float destroyTimer = 5f;
     public float shotSpeed = 1f;
+    AudioSource audioSource;
+    public AudioClip laserHit;
+    public AudioClip fireLaser;
+    public AudioClip shipDestroy;
     //public int thing;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.PlayOneShot(fireLaser);
+    }
+
+    
 
     void Update()
     {
@@ -22,7 +35,9 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.tag == "mothership")
         {
             collision.gameObject.GetComponent<EnemyMothershipHealth>().GetDamage();
+            audioSource.PlayOneShot(shipDestroy);
             Destroy(gameObject);
+            
         }
         if (collision.gameObject.tag == "Enemy")
         {
@@ -33,7 +48,9 @@ public class Bullet : MonoBehaviour
             {
                 Debug.LogWarning("Emmie");
                 esc_script.TakeDamage();
+                audioSource.PlayOneShot(laserHit);
             }
+            audioSource.PlayOneShot(shipDestroy);
             Destroy(gameObject);
 
         }
