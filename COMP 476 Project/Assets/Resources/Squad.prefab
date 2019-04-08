@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 304}
   - component: {fileID: 679}
   - component: {fileID: 687}
@@ -17,6 +18,11 @@ GameObject:
   - component: {fileID: 695497920184599642}
   - component: {fileID: 6633662265873600810}
 >>>>>>> parent of cd45f95... Merge pull request #13 from n04x/Thomas
+=======
+  - component: {fileID: 304}
+  - component: {fileID: 679}
+  - component: {fileID: 687}
+>>>>>>> parent of c57e327... Merge pull request #18 from n04x/Thomas
   m_Layer: 0
   m_Name: Squad
   m_TagString: Enemy
