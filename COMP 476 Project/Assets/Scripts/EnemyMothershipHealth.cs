@@ -30,6 +30,10 @@ public class EnemyMothershipHealth : MonoBehaviour
     //    }
     //}
 
+    private void Start()
+    {
+        PV = GetComponent<PhotonView>();
+    }
     void Update()
     {
         if(PhotonNetwork.IsMasterClient)
@@ -38,16 +42,22 @@ public class EnemyMothershipHealth : MonoBehaviour
             {
                 PhotonNetwork.Destroy(this.gameObject);
             }
-            PV.RPC("MotherShipHealth", RpcTarget.Others, health);
         }
     }
 
     public void GetDamage()
     {
-        health--;
         Debug.Log(gameObject.name + " hp left: " + health);
+        health--;
+        if (!PV.IsMine)
+        {
+        } else
+        {
+            PV.RPC("Health", RpcTarget.All, health);
+        }
     }
-    [PunRPC] void MotherShipHealth(int h)
+
+    [PunRPC] void Health(int h)
     {
         health = h;
     }
