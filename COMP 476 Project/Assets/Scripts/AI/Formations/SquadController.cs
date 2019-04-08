@@ -13,10 +13,10 @@ public class SquadController : MonoBehaviour
      * a_f[1]: leader + 1 goon
      * a_f[0]: leader
      * */
-    public Formation []available_formations;
+    public Formation[] available_formations;
     public Transform squad_target;
     [SerializeField] private GameObject[] markers;
-    [SerializeField]private EnemyStateController leader;
+    [SerializeField] private EnemyStateController leader;
     private List<EnemyStateController> units;
     [SerializeField] private EnemyStats leader_stat, goon_stats;
     void Start()
@@ -24,16 +24,16 @@ public class SquadController : MonoBehaviour
         leader.target = squad_target;
         leader.enemy_stats = leader_stat;
         if (available_formations.Length > 1) current_formation = available_formations[available_formations.Length - 1];
-        
+
         RefreshCurrentUnits();
         UpdateUnitTargets();
     }
     float update_rate = 2f;
     float update_timer = 2f;
- void Update()
+    void Update()
     {
         update_timer -= Time.deltaTime;
-        if (update_timer <=0)
+        if (update_timer <= 0)
         {
             update_timer = update_rate;
             //RefreshCurrentUnits();
@@ -41,7 +41,7 @@ public class SquadController : MonoBehaviour
             UpdateFormation();
 
         }
-      
+
     }
 
     //Picks next formation of a unit dies. The idea is to call this before destroying an enemy
@@ -49,32 +49,52 @@ public class SquadController : MonoBehaviour
     {
         RefreshCurrentUnits();
         current_formation = available_formations[units.Count];
-        if (units.Count == 0 && leader == null) Destroy(gameObject); 
+        if (units.Count == 0 && leader == null) Destroy(gameObject);
         UpdateUnitTargets();
+        RefreshTarget();
+    }
+
+    private void RefreshTarget()
+    {
+        GameObject[] tgt = GameObject.FindGameObjectsWithTag("Player");
+
+        float min = Mathf.Infinity;
+        for (int i = 0; i < tgt.Length; i++)
+        {
+            float test = (tgt[i].transform.position - transform.position).magnitude;
+            if (test <= min)
+            {
+                min = test;
+                squad_target = tgt[i].transform;
+            }
+        }
+
     }
     void UpdateUnitTargets()
     {
-      GameObject  empty = new GameObject();
+        GameObject empty = new GameObject();
         if (markers != null)
         {
-            for(int i = 0; i < markers.Length; i++)
+            for (int i = 0; i < markers.Length; i++)
             {
                 Destroy(markers[i]);
             }
         }
         markers = new GameObject[current_formation.offset_from_lead.Length];
-        for(int i = 0; i < markers.Length; i++)
+        for (int i = 0; i < markers.Length; i++)
         {
-            markers[i] = current_formation.GenerateMarker(empty, (leader.transform.rotation  * current_formation.offset_from_lead[i])+leader.transform.position, Quaternion.identity, leader.transform);
+            markers[i] = current_formation.GenerateMarker(empty, (leader.transform.rotation * current_formation.offset_from_lead[i]) + leader.transform.position, Quaternion.identity, leader.transform);
             units[i].target = markers[i].transform;
         }
+        if (leader != null) leader.target = squad_target;
+
         Destroy(empty);
     }
 
-    
+
     void RefreshCurrentUnits()
     {
-        if (leader == null && units!=null && units.Count > 0)
+        if (leader == null && units != null && units.Count > 0)
         {
             leader = units[0];
             leader.target = squad_target;
