@@ -45,6 +45,7 @@ public class PlayerControls : MonoBehaviour
 
     //This will decelerate as soon as the key is not click anymore
     //Applies to WASD keys
+    //Up for decision if needed or not 
     IEnumerator decelerateSpeed()
     {
         float time = 0f;
@@ -65,31 +66,30 @@ public class PlayerControls : MonoBehaviour
 
         //Accelerate
         if (Input.GetKey("w"))
-            _rb.AddForce( transform.forward * movementSpeed, ForceMode.Impulse);
+            _rb.velocity += transform.forward * movementSpeed;
 
-        if (Input.GetKeyUp("w"))
-           StartCoroutine(decelerateSpeed());
+        //if (Input.GetKeyUp("w"))
+        //   StartCoroutine(decelerateSpeed());
 
         if (Input.GetKey("s"))
-            _rb.AddForce(transform.forward * -movementSpeed, ForceMode.Impulse);
+            _rb.velocity += transform.forward * -movementSpeed;
 
-        if (Input.GetKeyUp("s"))
-            StartCoroutine(decelerateSpeed());
+        //if (Input.GetKeyUp("s"))
+        //    StartCoroutine(decelerateSpeed());
 
         //Strafe
         if (Input.GetKey("a"))
-            _rb.AddForce(-transform.right * movementSpeed, ForceMode.Impulse);
+            _rb.velocity += -transform.right * movementSpeed;
 
         //if (Input.GetKeyUp("a"))
-          //StartCoroutine(decelerateSpeed());
+        //StartCoroutine(decelerateSpeed());
 
         if (Input.GetKey("d"))
-            _rb.AddForce(transform.right * movementSpeed, ForceMode.Impulse);
+            _rb.velocity += transform.right * movementSpeed;
 
         //if (Input.GetKeyUp("d"))
-            //StartCoroutine(decelerateSpeed());
+        //StartCoroutine(decelerateSpeed());
 
-        transform.Translate(movementSpeed * _rb.velocity.normalized * Time.deltaTime);
         if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
         {
             if (!audioSource.isPlaying)
