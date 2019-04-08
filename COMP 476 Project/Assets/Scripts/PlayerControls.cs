@@ -68,7 +68,7 @@ public class PlayerControls : MonoBehaviour
             _rb.velocity += transform.forward * movementSpeed;
 
         if (Input.GetKeyUp("w"))
-            StartCoroutine(decelerateSpeed());
+           StartCoroutine(decelerateSpeed());
 
         if (Input.GetKey("s"))
             _rb.velocity += transform.forward * -movementSpeed;
@@ -80,15 +80,16 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey("a"))
             _rb.velocity += -transform.right * movementSpeed;
 
-        if (Input.GetKeyUp("a"))
-            StartCoroutine(decelerateSpeed());
+        //if (Input.GetKeyUp("a"))
+          //  StartCoroutine(decelerateSpeed());
 
         if (Input.GetKey("d"))
             _rb.velocity += transform.right * movementSpeed;
 
-        if (Input.GetKeyUp("d"))
-            StartCoroutine(decelerateSpeed());
+        //if (Input.GetKeyUp("d"))
+        //    StartCoroutine(decelerateSpeed());
 
+        transform.Translate(movementSpeed * _rb.velocity.normalized * Time.deltaTime);
         if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
         {
             if (!audioSource.isPlaying)
