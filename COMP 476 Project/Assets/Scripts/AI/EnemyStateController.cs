@@ -22,11 +22,12 @@ public class EnemyStateController : StateController
     public AudioClip laserHit;
     public AudioClip fireLaser;
     public AudioClip shipDestroy;
-
+    PhotonView PV;
     public void Start()
     {
 
         audioSource = GetComponent<AudioSource>();
+        PV = GetComponent<PhotonView>();
     }
 
     private void Update()
@@ -67,7 +68,7 @@ public class EnemyStateController : StateController
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (PhotonNetwork.IsMasterClient)
+        if (PV!=null && PV.IsMine)
         {
 
             if (collision.gameObject.tag=="Player")
