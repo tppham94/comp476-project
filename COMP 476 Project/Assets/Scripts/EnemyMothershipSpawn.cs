@@ -44,8 +44,13 @@ public class EnemyMothershipSpawn : MonoBehaviour
 >>>>>>> parent of cd45f95... Merge pull request #13 from n04x/Thomas
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             GameObject a = PhotonNetwork.Instantiate(Enemy1.name, spawnA.position, Quaternion.identity);
             GameObject b = PhotonNetwork.Instantiate(Enemy1.name, spawnB.position, Quaternion.identity);
+=======
+            GameObject a = PhotonNetwork.Instantiate("Squad", spawnA.position, Quaternion.identity);
+            GameObject b = PhotonNetwork.Instantiate("Squad", spawnB.position, Quaternion.identity);
+>>>>>>> parent of c57e327... Merge pull request #18 from n04x/Thomas
 =======
             GameObject a = PhotonNetwork.Instantiate("Squad", spawnA.position, Quaternion.identity);
             GameObject b = PhotonNetwork.Instantiate("Squad", spawnB.position, Quaternion.identity);
