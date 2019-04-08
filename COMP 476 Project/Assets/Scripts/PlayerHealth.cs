@@ -27,8 +27,8 @@ public class PlayerHealth : MonoBehaviour
 
     void DisplayHealth()
     {
-        if (health != numOfHealthBars)
-            bars[health].enabled = false;
+        foreach (Image o in bars)
+            o.enabled = false;
 
         if (health > 0)
             bars[(health - 1)].enabled = true;
@@ -41,7 +41,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage()
     {
-        //TODO Figure out what to do with 2 TakeDamage() on same frame. Reduces health by 2 but DisplayHealth() messes up.
         health--;
         Debug.Log("Health: " + health);
     }
