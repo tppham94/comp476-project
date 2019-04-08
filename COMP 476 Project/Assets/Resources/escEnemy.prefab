@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6570815789989239939}
   - component: {fileID: 4252437010507617327}
   - component: {fileID: 5241906829016708280}
+  - component: {fileID: 1806533120615353438}
   m_Layer: 0
   m_Name: escEnemy
   m_TagString: Enemy
@@ -109,6 +110,9 @@ MonoBehaviour:
   attack_target: {fileID: 0}
   obstacle_normal: {x: 0, y: 0, z: 0}
   can_attack: 1
+  laserHit: {fileID: 0}
+  fireLaser: {fileID: 0}
+  shipDestroy: {fileID: 0}
   shoot_timer: 3
   shoot_flag: 0
 --- !u!114 &4252437010507617327
@@ -146,6 +150,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_hp: 3
+--- !u!114 &1806533120615353438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082774190486484364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
 --- !u!1 &6737978067865042560
 GameObject:
   m_ObjectHideFlags: 0
