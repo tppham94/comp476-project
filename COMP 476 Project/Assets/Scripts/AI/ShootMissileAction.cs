@@ -11,18 +11,16 @@ public class ShootMissileAction : Action
 
         EnemyStateController esc;
         if (!(controller.GetType() == typeof(EnemyStateController))) return;
-        esc = controller as EnemyStateController;
-        if (!esc.can_attack) return;
         if (controller.target != null)
         {
             esc = controller as EnemyStateController;
-            if (/*esc.enemy_stats.homing_missile_prefab != null && */(esc.current_state.StateName.Equals("Arrive") || esc.current_state.StateName.Equals("Seek")))
+            if (esc.enemy_stats.homing_missile_prefab != null && (esc.current_state.StateName.Equals("Arrive") || esc.current_state.StateName.Equals("Seek")))
             {
                 Shoot(esc, true);
 
 
             }
-            else if (/*esc.enemy_stats.straight_missile_prefab != null && */esc.current_state.StateName.Equals("Attack"))
+            else if (esc.enemy_stats.straight_missile_prefab != null && esc.current_state.StateName.Equals("Attack"))
             {
                 Shoot(esc,false);
             }
@@ -36,8 +34,7 @@ public class ShootMissileAction : Action
             if (homing)
             {
                 //SET TO PHOTONNETWORKINSTANTIATE
-                //GameObject missile = PhotonNetwork.Instantiate(esc.enemy_stats.homing_missile_prefab.name, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
-                GameObject missile = PhotonNetwork.Instantiate("HomingMissile", esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
+                GameObject missile = PhotonNetwork.Instantiate(esc.enemy_stats.homing_missile_prefab.name, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
                 EnemyStateController miss_script = missile.GetComponent<EnemyStateController>();
                 if (miss_script != null)
                 {
@@ -53,8 +50,7 @@ public class ShootMissileAction : Action
             else
             {
                 //SET TO PHOTONNETWORKINSTANTIATE
-                GameObject missile = PhotonNetwork.Instantiate("Enemy Ammo", esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
-                //GameObject missile = PhotonNetwork.Instantiate(esc.enemy_stats.straight_missile_prefab.name, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
+                GameObject missile = PhotonNetwork.Instantiate(esc.enemy_stats.straight_missile_prefab.name, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
 
                 esc.shoot_flag = false;
                 esc.shoot_timer = esc.enemy_stats.straight_missile_interval;

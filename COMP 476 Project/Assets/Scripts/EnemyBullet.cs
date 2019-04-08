@@ -25,6 +25,7 @@ public class EnemyBullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.LogWarning("Booped");
 
         if (PhotonNetwork.IsMasterClient)
         {
@@ -32,7 +33,11 @@ public class EnemyBullet : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 //Damage player
+<<<<<<< HEAD
                 audioSource.PlayOneShot(laserHit);
+=======
+                Debug.LogWarning("COLLIDED WITH PLAYER");
+>>>>>>> parent of cd45f95... Merge pull request #13 from n04x/Thomas
                 PhotonNetwork.Destroy(this.gameObject);
             }
         }
