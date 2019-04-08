@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 676}
   - component: {fileID: 677}
   - component: {fileID: 614}
-  - component: {fileID: 618}
+  - component: {fileID: 615}
   m_Layer: 0
   m_Name: ShipAvatar
   m_TagString: Player
@@ -146,7 +146,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129}
   m_Enabled: 0
---- !u!82 &618
+--- !u!82 &615
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
