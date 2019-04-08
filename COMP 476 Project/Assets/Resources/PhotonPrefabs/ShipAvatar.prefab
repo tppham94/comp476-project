@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   maxSpeed: 100
+  decelerationTime: 1
   mouseSpeed: 6
   mouseYLimit: 45
   collision: {fileID: 0}
