@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 441}
   - component: {fileID: 698}
   - component: {fileID: 721}
-  - component: {fileID: 3411249778307673565}
   m_Layer: 0
   m_Name: Squad
   m_TagString: Enemy
@@ -82,21 +81,6 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &3411249778307673565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
 --- !u!1001 &695497918931133954
 PrefabInstance:
   m_ObjectHideFlags: 0
