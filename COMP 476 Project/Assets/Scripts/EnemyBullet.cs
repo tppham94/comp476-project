@@ -12,9 +12,11 @@ public class EnemyBullet : MonoBehaviour
     public AudioClip fireLaser;
     public AudioClip shipDestroy;
 
+    PhotonView PV;
 
     private void Start()
     {
+        PV = GetComponent<PhotonView>();
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -26,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (PhotonNetwork.IsMasterClient)
+        if (PV != null && PV.IsMine)
         {
 
             if (collision.gameObject.tag == "Player")
