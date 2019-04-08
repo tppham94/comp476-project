@@ -65,29 +65,29 @@ public class PlayerControls : MonoBehaviour
 
         //Accelerate
         if (Input.GetKey("w"))
-            _rb.velocity += transform.forward * movementSpeed;
+            _rb.AddForce( transform.forward * movementSpeed, ForceMode.Impulse);
 
         if (Input.GetKeyUp("w"))
            StartCoroutine(decelerateSpeed());
 
         if (Input.GetKey("s"))
-            _rb.velocity += transform.forward * -movementSpeed;
+            _rb.AddForce(transform.forward * -movementSpeed, ForceMode.Impulse);
 
         if (Input.GetKeyUp("s"))
             StartCoroutine(decelerateSpeed());
 
         //Strafe
         if (Input.GetKey("a"))
-            _rb.velocity += -transform.right * movementSpeed;
+            _rb.AddForce(-transform.right * movementSpeed, ForceMode.Impulse);
 
         //if (Input.GetKeyUp("a"))
-          //  StartCoroutine(decelerateSpeed());
+          //StartCoroutine(decelerateSpeed());
 
         if (Input.GetKey("d"))
-            _rb.velocity += transform.right * movementSpeed;
+            _rb.AddForce(transform.right * movementSpeed, ForceMode.Impulse);
 
         //if (Input.GetKeyUp("d"))
-        //    StartCoroutine(decelerateSpeed());
+            //StartCoroutine(decelerateSpeed());
 
         transform.Translate(movementSpeed * _rb.velocity.normalized * Time.deltaTime);
         if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
