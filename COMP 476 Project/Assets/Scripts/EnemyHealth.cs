@@ -25,7 +25,8 @@ public class EnemyHealth : MonoBehaviour
 
                 Die();
             }
-            PV.RPC("EnemyHP", RpcTarget.Others, current_hp);
+            //Error here 
+            //PV.RPC("EnemyHP", RpcTarget.Others, current_hp);
         }
     }
     [PunRPC]
