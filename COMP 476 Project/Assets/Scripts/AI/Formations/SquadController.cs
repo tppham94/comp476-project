@@ -51,6 +51,24 @@ public class SquadController : MonoBehaviour
         current_formation = available_formations[units.Count];
         if (units.Count == 0 && leader == null) Destroy(gameObject); 
         UpdateUnitTargets();
+        RefreshTarget();
+    }
+
+    private void RefreshTarget()
+    {
+        GameObject[] tgt = GameObject.FindGameObjectsWithTag("Player");
+        
+        float min = Mathf.Infinity;
+        for (int i = 0; i < tgt.Length; i++)
+        {
+            float test = (tgt[i].transform.position - transform.position).magnitude;
+            if (test <= min)
+            {
+                min = test;
+                squad_target = tgt[i].transform;
+            }
+        }
+
     }
     void UpdateUnitTargets()
     {
@@ -68,6 +86,8 @@ public class SquadController : MonoBehaviour
             markers[i] = current_formation.GenerateMarker(empty, (leader.transform.rotation  * current_formation.offset_from_lead[i])+leader.transform.position, Quaternion.identity, leader.transform);
             units[i].target = markers[i].transform;
         }
+        if(leader!=null) leader.target = squad_target;
+
         Destroy(empty);
     }
 
