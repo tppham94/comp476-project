@@ -26,10 +26,14 @@ public class EnemyMothershipSpawn : MonoBehaviour
         spawnTimer -= Time.deltaTime / numbPlayers;
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (spawnTimer < 0 )
 =======
         if (spawnTimer < 0 && PhotonNetwork.IsMasterClient)
 >>>>>>> parent of d6b2584... Update EnemyMothershipSpawn.cs
+=======
+        if (spawnTimer < 0 /*&& PhotonNetwork.IsMasterClient*/)
+>>>>>>> parent of f924ae5... Merge branch 'master' into Thomas
         {
             GameObject a = PhotonNetwork.Instantiate("Squad", spawnA.position, Quaternion.identity);
             GameObject b = PhotonNetwork.Instantiate("Squad", spawnB.position, Quaternion.identity);
