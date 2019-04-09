@@ -83,10 +83,8 @@ public class PlayerShoot : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "mothership")
             {
-                hit.collider.gameObject.GetComponent<EnemyMothershipHealth>().GetDamage();
-                audioSource.PlayOneShot(shipDestroy);
-                Destroy(gameObject);
-
+                hit.collider.gameObject.GetComponentInParent<EnemyMothershipHealth>().GetDamage();
+                audioSource.PlayOneShot(laserHit);
             }
             if (hit.collider.gameObject.tag == "Enemy")
             {
