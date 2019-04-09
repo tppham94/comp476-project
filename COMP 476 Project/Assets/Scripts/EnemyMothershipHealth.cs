@@ -47,14 +47,12 @@ public class EnemyMothershipHealth : MonoBehaviour
 
     public void GetDamage()
     {
-        Debug.Log(gameObject.name + " hp left: " + health);
+        Debug.LogWarning(gameObject.name + " hp left: " + health);
         health--;
-        if (!PV.IsMine)
-        {
-        } else
-        {
+      
+        
             PV.RPC("Health", RpcTarget.All, health);
-        }
+       
     }
 
     [PunRPC] void Health(int h)

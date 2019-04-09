@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +12,11 @@ public class Bullet : MonoBehaviour
     public AudioClip fireLaser;
     public AudioClip shipDestroy;
     //public int thing;
-
+    private PhotonView PV;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-
+        PV = GetComponent<PhotonView>();
         audioSource.PlayOneShot(fireLaser);
     }
 
@@ -32,27 +33,28 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "mothership")
+        if (PV.IsMine )
         {
-            collision.gameObject.GetComponent<EnemyMothershipHealth>().GetDamage();
-            audioSource.PlayOneShot(shipDestroy);
-            Destroy(gameObject);
-            
-        }
-        if (collision.gameObject.tag == "Enemy")
-        {
-
-
-            EnemyHealth esc_script = collision.gameObject.GetComponentInParent<EnemyHealth>();
-            if (esc_script != null)
+            if (collision.gameObject.tag == "mothership")
             {
-                Debug.LogWarning("Emmie");
-                esc_script.TakeDamage();
-                audioSource.PlayOneShot(laserHit);
-            }
-            audioSource.PlayOneShot(shipDestroy);
-            Destroy(gameObject);
+                collision.gameObject.GetComponent<EnemyMothershipHealth>().GetDamage();
+                PhotonNetwork.Destroy(gameObject);
 
+            }
+            if (collision.gameObject.tag == "Enemy")
+            {
+
+
+                EnemyHealth esc_script = collision.gameObject.GetComponent<EnemyHealth>();
+                if (esc_script != null)
+                {
+                    esc_script.TakeDamage();
+                    audioSource.PlayOneShot(laserHit);
+                }
+                audioSource.PlayOneShot(shipDestroy);
+                PhotonNetwork.Destroy(gameObject);
+
+            }
         }
     }
 }

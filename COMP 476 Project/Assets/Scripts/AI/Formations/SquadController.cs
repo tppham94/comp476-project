@@ -50,7 +50,7 @@ public class SquadController : MonoBehaviour
     {
         RefreshCurrentUnits();
         current_formation = available_formations[units.Count];
-        if (units.Count == 0 && leader == null) Destroy(gameObject);
+       if (units.Count == 0 && leader == null) Destroy(gameObject);
         UpdateUnitTargets();
         RefreshTarget();
        
