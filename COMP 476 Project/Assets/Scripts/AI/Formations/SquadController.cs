@@ -28,8 +28,8 @@ public class SquadController : MonoBehaviour
         RefreshCurrentUnits();
         UpdateUnitTargets();
     }
-    float update_rate = 2f;
-    float update_timer = 2f;
+    float update_rate = .5f;
+    float update_timer = .5f;
     void Update()
     {
         update_timer -= Time.deltaTime;
