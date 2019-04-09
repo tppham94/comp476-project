@@ -11,6 +11,7 @@ public class AttackDecision : Decision
 
         esc = controller as EnemyStateController;
         if (esc == null) return false;
+        if (esc.target == null) return false;
         if (esc.attack_target == null) return false;
         if (!esc.can_attack) return false;
         return ((esc.target.transform.position - esc.transform.position).magnitude <= esc.enemy_stats.arrival_radius);

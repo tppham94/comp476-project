@@ -63,6 +63,7 @@ public class SquadController : MonoBehaviour
         float min = Mathf.Infinity;
         for (int i = 0; i < tgt.Length; i++)
         {
+            if (tgt[i].name.Contains("Avatar")) continue;
             float test = (tgt[i].transform.position - transform.position).magnitude;
             if (test <= min)
             {
@@ -83,10 +84,12 @@ public class SquadController : MonoBehaviour
             }
         }
         markers = new GameObject[current_formation.offset_from_lead.Length];
+        if (leader == null) return;
         for (int i = 0; i < markers.Length; i++)
         {
             markers[i] = current_formation.GenerateMarker(empty, (leader.transform.rotation * current_formation.offset_from_lead[i]) + leader.transform.position, Quaternion.identity, leader.transform);
-            units[i].target = markers[i].transform;
+
+            if (i<units.Count) units[i].target = markers[i].transform;
         }
         if (leader != null) leader.target = squad_target;
 

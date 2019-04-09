@@ -23,10 +23,10 @@ MonoBehaviour:
   attack_damage: 50
   search_duration: 4
   searching_turn_speed: 120
-  slowdown_radius: 75
-  arrival_radius: 0.5
+  slowdown_radius: 50
+  arrival_radius: 0.1
   maximum_acceleration: 70
-  time_to_target: 0.1
+  time_to_target: 0.2
   maximum_angular_velocity: 30
   maximum_angular_acceleration: 30
   angular_slowdown: 20
