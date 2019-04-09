@@ -92,7 +92,11 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
         {
-            if (!audioSource.isPlaying)
+
+            if (this.GetComponent<PlayerHealth>().GetHealth() <= 0)
+                audioSource.Stop();
+
+            else if (!audioSource.isPlaying)
             {
                 audioSource.Play();
                 
