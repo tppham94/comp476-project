@@ -41,5 +41,6 @@ MonoBehaviour:
   - Die
   - EnemyHP
   - Health
+  - timerUpdate
   DisableAutoOpenWizard: 1
   ShowSettings: 1
