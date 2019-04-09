@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4252437010507617327}
   - component: {fileID: 5241906829016708280}
   - component: {fileID: 1806533120615353438}
+  - component: {fileID: 4860003652544181843}
   m_Layer: 0
   m_Name: escEnemy
   m_TagString: Enemy
@@ -165,6 +166,20 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
+--- !u!136 &4860003652544181843
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082774190486484364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 4.3050337
+  m_Height: 10.7425585
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6737978067865042560
 GameObject:
   m_ObjectHideFlags: 0

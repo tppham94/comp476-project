@@ -41,6 +41,7 @@ public class SquadController : MonoBehaviour
             UpdateFormation();
 
         }
+        Flock();
 
     }
 
@@ -52,6 +53,7 @@ public class SquadController : MonoBehaviour
         if (units.Count == 0 && leader == null) Destroy(gameObject);
         UpdateUnitTargets();
         RefreshTarget();
+       
     }
 
     private void RefreshTarget()
@@ -113,6 +115,44 @@ public class SquadController : MonoBehaviour
             }
             currentsc.attack_target = squad_target;
         }
+
+    }
+    void Flock()
+    {
+       Vector3 cohesion = Flock(cohesionRadius, cohesionFactor);
+        Vector3 repulsion = Flock(repulsionRadius, repulsionFactor);
+        Debug.Log(cohesion+repulsion);
+        transform.position += (cohesion) * Time.deltaTime;
+        transform.position += (repulsion) * Time.deltaTime;
+    }
+    //flocking
+
+    float repulsionRadius = 100f;
+    float cohesionRadius = 125f;
+    float repulsionFactor = -1f;
+    float cohesionFactor = 0.5f;
+    float speed = 3f;
+    List<SquadController> squado = new List<SquadController>();
+    public SquadController[] squids;
+    public Vector3 vel;
+     Vector3 Flock(float radius, float factor)
+    {
+         squids = FindObjectsOfType<SquadController>();
+        Vector3 avg_pos = Vector3.zero;
+        float count = 0;
+        for (int i = 0; i < squids.Length;i++)
+        {
+            float dist = (squids[i].transform.position - transform.position).magnitude;
+            if ( dist < radius)
+            {
+                count++;
+                avg_pos += squids[i].transform.position;
+            }
+        }
+        avg_pos /= count;
+
+        vel = (avg_pos - transform.position) * factor;
+        return vel;
 
     }
 }
