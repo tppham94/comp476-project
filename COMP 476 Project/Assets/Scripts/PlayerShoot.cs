@@ -79,25 +79,31 @@ public class PlayerShoot : MonoBehaviour
             laser.SetPosition(1, rayOrigin+( fpscam.transform.forward * 500));
 
         }
-        if (hit.collider != null)
+        if (hit.collider != null && PV.IsMine)
         {
-            if (hit.collider.gameObject.tag == "mothership")
-            {
-                hit.collider.gameObject.GetComponentInParent<EnemyMothershipHealth>().GetDamage();
-                audioSource.PlayOneShot(laserHit);
-            }
-            if (hit.collider.gameObject.tag == "Enemy")
-            {
+            /*  if (hit.collider.gameObject.tag == "mothership")
+              {
+                  hit.collider.gameObject.GetComponentInParent<EnemyMothershipHealth>().GetDamage();
+                  audioSource.PlayOneShot(laserHit);
+              }
+              if (hit.collider.gameObject.tag == "Enemy")
+              {
 
 
-                EnemyHealth esc_script = hit.collider.gameObject.GetComponentInParent<EnemyHealth>();
-                if (esc_script != null)
-                {
-                    Debug.LogWarning("Emmie");
-                    esc_script.TakeDamage();
-                    audioSource.PlayOneShot(laserHit);
-                }
-                audioSource.PlayOneShot(shipDestroy);
+                  EnemyHealth esc_script = hit.collider.gameObject.GetComponentInParent<EnemyHealth>();
+                  if (esc_script != null)
+                  {
+                      Debug.LogWarning("Emmie");
+                      esc_script.TakeDamage();
+                      audioSource.PlayOneShot(laserHit);
+                  }
+                  audioSource.PlayOneShot(shipDestroy);
+
+              }*/
+            string collidertag = hit.collider.gameObject.tag;
+        if(collidertag == "mothership" || collidertag == "Enemy")
+            {
+                PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bullet"), hit.point, this.transform.rotation);
 
             }
         }

@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
             {
                 Debug.LogWarning("Should be dead");
 
-                Die();
+                PV.RPC("Die", RpcTarget.All);
             }
             //Error here 
             //PV.RPC("EnemyHP", RpcTarget.Others, current_hp);
@@ -38,11 +38,15 @@ public class EnemyHealth : MonoBehaviour
     {
         
             current_hp--;
-        
+       
+      
+            PV.RPC("EnemyHP", RpcTarget.All, current_hp);
+       
+
     }
-    
+    [PunRPC]
     private void Die()
     {
-        PhotonNetwork.Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 }
