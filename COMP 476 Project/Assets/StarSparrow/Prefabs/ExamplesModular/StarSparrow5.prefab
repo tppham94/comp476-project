@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 0.2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.839462, y: 1.8739222, z: 4.1918483}
+  m_Center: {x: 0.6697252, y: -0.42086774, z: 0.16019416}
 --- !u!1 &1053129674179618
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,8 +116,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7, z: 9}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.705813, y: 2.0884075, z: 10.105336}
+  m_Center: {x: -0.12819242, y: -0.009734631, z: 0.5526681}
 --- !u!1 &1203082659272826
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +470,6 @@ MonoBehaviour:
   numbPlayers: 1
   spawnA: {fileID: 7624960434226697334}
   spawnB: {fileID: 3760764712434206757}
-  Enemy1: {fileID: 695497920184599640, guid: 13a79e44d6497d54eb55e5216ea6c727, type: 3}
 --- !u!114 &1371965333161681160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,8 +915,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 0.2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.4797263, y: 1.5030407, z: 4.69671}
+  m_Center: {x: -0.4898538, y: -0.10879087, z: 0.30947852}
 --- !u!1 &1718948920961222
 GameObject:
   m_ObjectHideFlags: 0
