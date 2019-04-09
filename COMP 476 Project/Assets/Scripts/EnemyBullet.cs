@@ -33,8 +33,9 @@ public class EnemyBullet : MonoBehaviour
 
             if (collision.gameObject.tag == "Player")
             {
-                //Damage player
+                 //Damage player
                 audioSource.PlayOneShot(laserHit);
+                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage();
                 PhotonNetwork.Destroy(this.gameObject);
             }
         }

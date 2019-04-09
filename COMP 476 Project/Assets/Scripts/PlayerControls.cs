@@ -9,6 +9,7 @@ public class PlayerControls : MonoBehaviour
     Rigidbody _rb;
     public float movementSpeed = 1;
     public float maxSpeed = 100;
+    public float decelerationTime = 1f;
 
     public float mouseSpeed = 6f;
     private float mouseX = 0f;
@@ -36,13 +37,30 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PV.IsMine)
+        if (PV.IsMine)
         {
             InputMovement();
         }
     }
+
+    //This will decelerate as soon as the key is not click anymore
+    //Applies to WASD keys
+    //Up for decision if needed or not 
+    IEnumerator decelerateSpeed()
+    {
+        float time = 0f;
+        Vector3 fromVelocity = _rb.velocity;
+        while (time < decelerationTime)
+        {
+            _rb.velocity = Vector3.Lerp(fromVelocity, Vector3.zero, time);
+            time += Time.deltaTime / decelerationTime;
+            yield return null;
+        }
+    }
+
     void InputMovement()
     {
+
         //Sets a max velocitty on ship
         _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, maxSpeed);
 
@@ -50,17 +68,29 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey("w"))
             _rb.velocity += transform.forward * movementSpeed;
 
+        //if (Input.GetKeyUp("w"))
+        //   StartCoroutine(decelerateSpeed());
+
         if (Input.GetKey("s"))
             _rb.velocity += transform.forward * -movementSpeed;
+
+        //if (Input.GetKeyUp("s"))
+        //    StartCoroutine(decelerateSpeed());
 
         //Strafe
         if (Input.GetKey("a"))
             _rb.velocity += -transform.right * movementSpeed;
 
+        //if (Input.GetKeyUp("a"))
+        //StartCoroutine(decelerateSpeed());
+
         if (Input.GetKey("d"))
             _rb.velocity += transform.right * movementSpeed;
 
-        if(Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
+        //if (Input.GetKeyUp("d"))
+        //StartCoroutine(decelerateSpeed());
+
+        if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
         {
             if (!audioSource.isPlaying)
             {

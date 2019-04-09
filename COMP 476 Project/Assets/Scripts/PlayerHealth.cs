@@ -5,30 +5,45 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health;
+    private int health;
     public int numOfHealthBars;
     public Image[] bars;
 
-    void Update()
+    private void Start()
     {
-        for (int i = 0; i < bars.Length; i++)
-        {
-            if (i < numOfHealthBars)
-            {
-                bars[i].enabled = true;
-            }
-            else
-            {
-                bars[i].enabled = false;
-            }
-        }
+        health = numOfHealthBars;
+
+        foreach (Image o in bars)
+            o.enabled = false;
     }
 
-    void OnCollisionEnter(Collision col)
+    void Update()
     {
-        if(col.gameObject.tag == "Enemy")
-        {
-            numOfHealthBars--;
-        }
+
+        DisplayHealth();
+
     }
+
+
+    void DisplayHealth()
+    {
+        foreach (Image o in bars)
+            o.enabled = false;
+
+        if (health > 0)
+            bars[(health - 1)].enabled = true;
+    }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+
+    public void TakeDamage()
+    {
+        health--;
+        Debug.Log("Health: " + health);
+    }
+
+
 }

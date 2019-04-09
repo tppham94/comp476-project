@@ -233,7 +233,6 @@ GameObject:
   - component: {fileID: 23649099192709106}
   - component: {fileID: 5193446615558794830}
   - component: {fileID: 1232058938140814203}
-  - component: {fileID: 7161161441740751812}
   - component: {fileID: 6098180975277857098}
   m_Layer: 2
   m_Name: PlayerShip
@@ -264,7 +263,6 @@ Transform:
   - {fileID: 4495194053536760}
   - {fileID: 4815001810674206}
   - {fileID: 4375879234735125358}
-  - {fileID: 3937850443623708385}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -352,36 +350,6 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &7161161441740751812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510364872509504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70afd554f3a66d44b6f25d89627f398, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 15
-  numOfHealthBars: 15
-  bars:
-  - {fileID: 1683129710608750004}
-  - {fileID: 8163666813839622660}
-  - {fileID: 5017492428284445272}
-  - {fileID: 117399462667085656}
-  - {fileID: 5127511771818808769}
-  - {fileID: 8066152013825884658}
-  - {fileID: 9030563892945006106}
-  - {fileID: 9212247372014915993}
-  - {fileID: 6694655259026365378}
-  - {fileID: 126828089011841650}
-  - {fileID: 5253434018099946936}
-  - {fileID: 3765703347344922289}
-  - {fileID: 7966519723810741245}
-  - {fileID: 2091435114235072794}
-  - {fileID: 6872632058911398909}
 --- !u!114 &6098180975277857098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,8 +405,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7, z: 9}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.7, z: 10.921032}
+  m_Center: {x: 0, y: -1.3950853e-15, z: 0.7747767}
 --- !u!1 &1376825669887767339
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,6 +5621,7 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+<<<<<<< HEAD
 --- !u!1 &3612744707097280409
 GameObject:
   m_ObjectHideFlags: 0
@@ -5840,6 +5809,8 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+=======
+>>>>>>> master
 --- !u!1 &6024033299151232793
 GameObject:
   m_ObjectHideFlags: 0
@@ -5939,6 +5910,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< HEAD
 --- !u!1 &6144580135151597644
 GameObject:
   m_ObjectHideFlags: 0
@@ -6013,6 +5985,8 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+=======
+>>>>>>> master
 --- !u!1 &6260489656527922994
 GameObject:
   m_ObjectHideFlags: 0
@@ -10711,7 +10685,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1 &6310089574133276957
+--- !u!1 &7935062275859837956
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10719,27 +10693,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3859700810131049892}
   - component: {fileID: 4028382940187421656}
   - component: {fileID: 8066152013825884658}
   m_Layer: 2
   m_Name: Healthbars (6)
+=======
+  - component: {fileID: 7064296570957497056}
+  - component: {fileID: 391617788599959728}
+  - component: {fileID: 6988450682418594211}
+  m_Layer: 0
+  m_Name: ShipParticleSystem (2)
+>>>>>>> master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3859700810131049892
-RectTransform:
+--- !u!4 &7064296570957497056
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6310089574133276957}
+  m_GameObject: {fileID: 7935062275859837956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.61, y: -0.97, z: -5.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 3937850443623708385}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10962,6 +10945,8 @@ Transform:
   m_LocalPosition: {x: 1.61, y: -0.97, z: -5.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+=======
+>>>>>>> master
   m_Father: {fileID: 4433942057210488}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -15631,6 +15616,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+<<<<<<< HEAD
 --- !u!1 &8097838503126793728
 GameObject:
   m_ObjectHideFlags: 0
@@ -15853,6 +15839,8 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+=======
+>>>>>>> master
 --- !u!1 &8750604902430752972
 GameObject:
   m_ObjectHideFlags: 0
@@ -20568,6 +20556,7 @@ MonoBehaviour:
   sizeOfEachStars: 1
   distanceBetweenStars: 30
   distanceFromPlayer: 5
+<<<<<<< HEAD
 --- !u!1 &8988994730644688763
 GameObject:
   m_ObjectHideFlags: 0
@@ -20642,3 +20631,5 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+=======
+>>>>>>> master
