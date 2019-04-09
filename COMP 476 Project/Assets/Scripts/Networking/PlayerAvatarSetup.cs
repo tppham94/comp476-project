@@ -38,10 +38,10 @@ public class PlayerAvatarSetup : MonoBehaviour
     {
         
     }
-
+    Vector3 player_offset = new Vector3(0,-5f,0);
     [PunRPC] void RPC_AddShip(int which_ship)
     {
         ship_value = which_ship;
-        my_ship = Instantiate(PlayerInfo.PI.all_ships[which_ship], transform.position, transform.rotation, transform);
+        my_ship = Instantiate(PlayerInfo.PI.all_ships[which_ship], transform.position+player_offset, transform.rotation, transform);
     }
 }

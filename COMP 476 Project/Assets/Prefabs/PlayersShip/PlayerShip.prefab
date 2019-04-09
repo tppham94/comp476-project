@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4170509796036806}
   - component: {fileID: 65767838192354502}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider3
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4511197017296230}
   - component: {fileID: 65722035265767440}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4815001810674206}
   - component: {fileID: 65238288305302662}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider6
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4495194053536760}
   - component: {fileID: 65267309585895692}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider5
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4722561196283352}
   - component: {fileID: 65340164749215534}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider4
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 1232058938140814203}
   - component: {fileID: 7161161441740751812}
   - component: {fileID: 6098180975277857098}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -327,6 +327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicShotPrefab: {fileID: 152888, guid: 5624ee9da9d10514ea7b808e83979c85, type: 3}
   shotCooldownTime: 1
+  laserHit: {fileID: 0}
+  fireLaser: {fileID: 0}
+  shipDestroy: {fileID: 0}
 --- !u!114 &1232058938140814203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4959394447520530}
   - component: {fileID: 65861728141062150}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -447,7 +450,7 @@ GameObject:
   - component: {fileID: 7662849528019021312}
   - component: {fileID: 2033680325068077116}
   - component: {fileID: 5127511771818808769}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +524,7 @@ GameObject:
   - component: {fileID: 3954953562673456427}
   - component: {fileID: 4418746032146750276}
   - component: {fileID: 7966519723810741245}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +598,7 @@ GameObject:
   - component: {fileID: 4448305909756042371}
   - component: {fileID: 2383519781265174005}
   - component: {fileID: 3765703347344922289}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +672,7 @@ GameObject:
   - component: {fileID: 4430916255235602714}
   - component: {fileID: 5158698321800020495}
   - component: {fileID: 9030563892945006106}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +746,7 @@ GameObject:
   - component: {fileID: 6993639265822919535}
   - component: {fileID: 8966822130080778532}
   - component: {fileID: 117399462667085656}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +820,7 @@ GameObject:
   - component: {fileID: 3587402906295002490}
   - component: {fileID: 3435980161247856503}
   - component: {fileID: 9212247372014915993}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +894,7 @@ GameObject:
   - component: {fileID: 3807485549745856514}
   - component: {fileID: 6042967974737619682}
   - component: {fileID: 2352665691073127453}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShipParticleSystem (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5589,7 +5592,7 @@ GameObject:
   - component: {fileID: 3010375438415216429}
   - component: {fileID: 3997900425020083970}
   - component: {fileID: 2983172437404892240}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5612,7 +5615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 80}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3997900425020083970
@@ -5661,7 +5664,7 @@ GameObject:
   - component: {fileID: 2218651173477116625}
   - component: {fileID: 7598527897965188637}
   - component: {fileID: 126828089011841650}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5736,7 +5739,7 @@ GameObject:
   - component: {fileID: 3210281731505217491}
   - component: {fileID: 6745112692844210221}
   - component: {fileID: 1120538361975050321}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5849,7 +5852,7 @@ GameObject:
   - component: {fileID: 6390813097449948926}
   - component: {fileID: 2219073433962677619}
   - component: {fileID: 3234416192858180592}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrosshairCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5947,7 +5950,7 @@ GameObject:
   - component: {fileID: 7148633132467824733}
   - component: {fileID: 5186893870765733}
   - component: {fileID: 2091435114235072794}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6021,7 +6024,7 @@ GameObject:
   - component: {fileID: 837599528509072505}
   - component: {fileID: 232645205891596791}
   - component: {fileID: 8229541281849959586}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShipParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10719,7 +10722,7 @@ GameObject:
   - component: {fileID: 3859700810131049892}
   - component: {fileID: 4028382940187421656}
   - component: {fileID: 8066152013825884658}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10793,7 +10796,7 @@ GameObject:
   - component: {fileID: 7072405247902477630}
   - component: {fileID: 2737194061135160677}
   - component: {fileID: 6694655259026365378}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10867,7 +10870,7 @@ GameObject:
   - component: {fileID: 8813588492182889670}
   - component: {fileID: 3427718881407455330}
   - component: {fileID: 1683129710608750004}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10941,7 +10944,7 @@ GameObject:
   - component: {fileID: 7064296570957497056}
   - component: {fileID: 391617788599959728}
   - component: {fileID: 6988450682418594211}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShipParticleSystem (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15639,7 +15642,7 @@ GameObject:
   - component: {fileID: 5334818779572726799}
   - component: {fileID: 4895728305185735412}
   - component: {fileID: 8163666813839622660}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15713,7 +15716,7 @@ GameObject:
   - component: {fileID: 2254461163702124723}
   - component: {fileID: 8440758281330221603}
   - component: {fileID: 5017492428284445272}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15787,7 +15790,7 @@ GameObject:
   - component: {fileID: 7115641245271578365}
   - component: {fileID: 4257038026769967412}
   - component: {fileID: 5253434018099946936}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15862,7 +15865,7 @@ GameObject:
   - component: {fileID: 2191125614925342978}
   - component: {fileID: 5914903987620898351}
   - component: {fileID: 4654955402838339993}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StarParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20576,7 +20579,7 @@ GameObject:
   - component: {fileID: 7769946958557384222}
   - component: {fileID: 166996536542124497}
   - component: {fileID: 6872632058911398909}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Healthbars (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
