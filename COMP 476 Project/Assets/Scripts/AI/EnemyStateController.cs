@@ -75,6 +75,7 @@ public class EnemyStateController : StateController
             {
                 //Damage player
                 audioSource.PlayOneShot(laserHit);
+                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage();
                 PhotonNetwork.Destroy(this.gameObject);
             }
         }
