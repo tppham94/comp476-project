@@ -58,7 +58,7 @@ public class PlayerShoot : MonoBehaviour
             laser.enabled = true;
             audioSource.PlayOneShot(fireLaser);
         }
-       // Debug.DrawRay(fpscam.ViewportToWorldPoint(new Vector3(.5f, .5f, 0)), fpscam.transform.forward * 500, Color.green);
+      Debug.DrawRay(fpscam.ViewportToWorldPoint(new Vector3(.5f, .5f, 0)), fpscam.transform.forward * 500, Color.green);
     
 
     }
@@ -68,11 +68,11 @@ public class PlayerShoot : MonoBehaviour
         StartCoroutine(Effect());
         rayOrigin = fpscam.ViewportToWorldPoint(new Vector3(.5f,.5f, 0));
         RaycastHit hit;
-        laser.SetPosition(0, GetComponentInChildren<PlayerHealth>().transform.position);
+        laser.SetPosition(0, GetComponentInChildren<MeshRenderer>().transform.position);
         if (Physics.Raycast(rayOrigin, fpscam.transform.forward, out hit, 500))
         {
             laser.SetPosition(1, hit.point);
-            Debug.LogWarning(hit.collider.name);
+            Debug.LogWarning(hit.collider.gameObject.name);
         }
         else
         {

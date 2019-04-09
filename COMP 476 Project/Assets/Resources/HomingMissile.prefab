@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 701}
   - component: {fileID: 622}
   - component: {fileID: 1182746457125248488}
+  - component: {fileID: 3257764116710708123}
   m_Layer: 0
   m_Name: HomingMissile
   m_TagString: Enemy
@@ -378,3 +379,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3257764116710708123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6934905f04d81b544881b308b16eb1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_hp: 1

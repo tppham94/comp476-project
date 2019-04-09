@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 677}
   - component: {fileID: 614}
   - component: {fileID: 615}
-  - component: {fileID: 2980946576666322935}
+  - component: {fileID: 6414121291981935294}
   m_Layer: 2
   m_Name: ShipAvatar
   m_TagString: Player
@@ -248,7 +248,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!120 &2980946576666322935
+--- !u!120 &6414121291981935294
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,8 +304,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.6734006
-        value: 0.0703125
+        time: 0.8518521
+        value: 0.21875
         inSlope: 0
         outSlope: 0
         tangentMode: 0

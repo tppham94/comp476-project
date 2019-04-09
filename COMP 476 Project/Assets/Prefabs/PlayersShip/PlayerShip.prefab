@@ -5621,7 +5621,6 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
-<<<<<<< HEAD
 --- !u!1 &3612744707097280409
 GameObject:
   m_ObjectHideFlags: 0
@@ -5809,8 +5808,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-=======
->>>>>>> master
 --- !u!1 &6024033299151232793
 GameObject:
   m_ObjectHideFlags: 0
@@ -5910,7 +5907,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-<<<<<<< HEAD
 --- !u!1 &6144580135151597644
 GameObject:
   m_ObjectHideFlags: 0
@@ -5985,8 +5981,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-=======
->>>>>>> master
 --- !u!1 &6260489656527922994
 GameObject:
   m_ObjectHideFlags: 0
@@ -10693,19 +10687,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 3859700810131049892}
   - component: {fileID: 4028382940187421656}
   - component: {fileID: 8066152013825884658}
   m_Layer: 2
   m_Name: Healthbars (6)
-=======
-  - component: {fileID: 7064296570957497056}
-  - component: {fileID: 391617788599959728}
-  - component: {fileID: 6988450682418594211}
-  m_Layer: 0
-  m_Name: ShipParticleSystem (2)
->>>>>>> master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10722,7 +10708,6 @@ Transform:
   m_LocalPosition: {x: 1.61, y: -0.97, z: -5.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-<<<<<<< HEAD
   m_Father: {fileID: 3937850443623708385}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10945,8 +10930,6 @@ Transform:
   m_LocalPosition: {x: 1.61, y: -0.97, z: -5.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-=======
->>>>>>> master
   m_Father: {fileID: 4433942057210488}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -15616,7 +15599,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
-<<<<<<< HEAD
 --- !u!1 &8097838503126793728
 GameObject:
   m_ObjectHideFlags: 0
@@ -15839,8 +15821,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-=======
->>>>>>> master
 --- !u!1 &8750604902430752972
 GameObject:
   m_ObjectHideFlags: 0
@@ -20556,7 +20536,6 @@ MonoBehaviour:
   sizeOfEachStars: 1
   distanceBetweenStars: 30
   distanceFromPlayer: 5
-<<<<<<< HEAD
 --- !u!1 &8988994730644688763
 GameObject:
   m_ObjectHideFlags: 0
@@ -20631,5 +20610,3 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-=======
->>>>>>> master
