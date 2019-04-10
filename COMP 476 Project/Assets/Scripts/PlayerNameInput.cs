@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerNameInputw : MonoBehaviour
+public class PlayerNameInput : MonoBehaviour
 {
     const string player_name_pref_key = "PlayerName";
 
