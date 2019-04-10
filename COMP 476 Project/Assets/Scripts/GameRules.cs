@@ -68,7 +68,7 @@ public class GameRules : MonoBehaviour
         if (numbMotherShips <= 0)
             WinCondition();
 
-        else if (numbShips <= 0)
+        else if (/*numbShips*/ numbPlayers <= 0)
             LoseCondition();
 
     }
