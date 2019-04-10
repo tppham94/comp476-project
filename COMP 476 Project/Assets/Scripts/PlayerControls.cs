@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     private PhotonView PV;
-    Rigidbody _rb;
+    public Rigidbody _rb;
     public float movementSpeed = 1;
     public float maxSpeed = 100;
     public float decelerationTime = 1f;
@@ -60,7 +60,6 @@ public class PlayerControls : MonoBehaviour
 
     void InputMovement()
     {
-
         //Sets a max velocitty on ship
         _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, maxSpeed);
 
