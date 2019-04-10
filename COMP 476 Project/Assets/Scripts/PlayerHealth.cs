@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
     void DisplayHealth()
     {
         if ((this.gameObject.transform.Find("PlayerShip(Clone)") != null) && (health <= 0))
-            Destroy(this.gameObject.transform.Find("PlayerShip(Clone)").gameObject);
+            PhotonNetwork.Destroy(this.gameObject.transform.Find("PlayerShip(Clone)").gameObject);
 
         foreach (Image o in bars)
             o.enabled = false;
