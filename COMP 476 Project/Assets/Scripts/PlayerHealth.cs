@@ -10,7 +10,6 @@ public class PlayerHealth : MonoBehaviour
     private PhotonView PV;
     public int numOfHealthBars;
     public Image[] bars;
-    private PhotonView PV;
 
 
     private void Start()
