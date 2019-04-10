@@ -42,7 +42,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks, ILobbyCallbacks
     {
         Debug.Log("Player has connected to the Photon master server");
         PhotonNetwork.AutomaticallySyncScene = true;
-        PhotonNetwork.NickName = "Player " + Random.Range(0, 1000);
+        //PhotonNetwork.NickName = "Player " + Random.Range(0, 1000);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
