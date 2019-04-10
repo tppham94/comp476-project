@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class GameRules : MonoBehaviour
     private int numbPlayers;
     private int numbShips;
     private int numbMotherShips;
+    private PhotonView PV;
 
     public Text game_over_text;
     public Text quit_option;
@@ -30,7 +32,7 @@ public class GameRules : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        PV = GetComponent<PhotonView>();
         
     }
 
@@ -75,19 +77,19 @@ public class GameRules : MonoBehaviour
 
     private void WinCondition()
     {
-        EnabledGameOverUI();
+        PV.RPC("EnabledGameOverUI", RpcTarget.All); 
         game_over_text.text = "CONGRATULATIONS, YOU WIN";
         gameOver = true;
     }
 
     private void LoseCondition()
     {
-        EnabledGameOverUI();
+        PV.RPC("EnabledGameOverUI", RpcTarget.All);
         game_over_text.text = "SORRY, YOU LOSE...";
         gameOver = true;
     }
 
-    void EnabledGameOverUI()
+    [PunRPC] void EnabledGameOverUI()
     {
         game_over_text.enabled = true;
         quit_option.enabled = true;
