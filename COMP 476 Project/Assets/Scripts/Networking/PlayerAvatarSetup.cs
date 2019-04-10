@@ -43,5 +43,6 @@ public class PlayerAvatarSetup : MonoBehaviour
     {
         ship_value = which_ship;
         my_ship = Instantiate(PlayerInfo.PI.all_ships[which_ship], transform.position+player_offset, transform.rotation, transform);
+
     }
 }

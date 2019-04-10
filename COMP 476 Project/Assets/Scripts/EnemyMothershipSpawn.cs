@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyMothershipSpawn : MonoBehaviour
 {
     public float timeToSpawn = 20f;
-    public int numbPlayers = PhotonRoom.room.players_in_room;
+    public int numbPlayers;
 
     private float spawnTimer;
 
@@ -18,6 +18,7 @@ public class EnemyMothershipSpawn : MonoBehaviour
 
     void Start()
     {
+        numbPlayers = PhotonRoom.room.players_in_room;
         spawnTimer = 0;
     }
 
