@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,12 +7,15 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     private int health;
+    private PhotonView PV;
     public int numOfHealthBars;
     public Image[] bars;
+
 
     private void Start()
     {
         health = numOfHealthBars;
+        PV = GetComponent<PhotonView>();
 
         foreach (Image o in bars)
             o.enabled = false;
@@ -19,7 +23,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-
+        if(!PV.IsMine)
+        {
+            return;
+        }
         DisplayHealth();
 
     }
