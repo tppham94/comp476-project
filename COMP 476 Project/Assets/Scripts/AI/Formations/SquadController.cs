@@ -124,7 +124,6 @@ public class SquadController : MonoBehaviour
     {
        Vector3 cohesion = Flock(cohesionRadius, cohesionFactor);
         Vector3 repulsion = Flock(repulsionRadius, repulsionFactor);
-        Debug.Log(cohesion+repulsion);
         transform.position += (cohesion) * Time.deltaTime;
         transform.position += (repulsion) * Time.deltaTime;
     }
