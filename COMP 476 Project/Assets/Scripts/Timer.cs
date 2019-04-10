@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (pv.IsMine)
+        if (pv.IsMine && !GameRules.GR.gameOver)
         {
             timer += Time.deltaTime;
             pv.RPC("timerUpdate", RpcTarget.All, timer);

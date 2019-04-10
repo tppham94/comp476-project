@@ -1,19 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameRules : MonoBehaviour
 {
+    public static GameRules GR;
     private GameObject[] motherships;
     private GameObject[] playerShips;
     private int numbPlayers;
     private int numbShips;
     private int numbMotherShips;
 
+    public Text game_over_text;
+    public Text quit_option;
+
     public bool gameOver = false;
 
     private float startTimer = 1f;
 
+    private void OnEnable()
+    {
+        if (GameRules.GR == null)
+        {
+            GameRules.GR = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -63,14 +75,22 @@ public class GameRules : MonoBehaviour
 
     private void WinCondition()
     {
-        Debug.Log("WIN!");
+        EnabledGameOverUI();
+        game_over_text.text = "CONGRATULATIONS, YOU WIN";
         gameOver = true;
     }
 
     private void LoseCondition()
     {
-        Debug.Log("LOSE!");
+        EnabledGameOverUI();
+        game_over_text.text = "SORRY, YOU LOSE...";
         gameOver = true;
+    }
+
+    void EnabledGameOverUI()
+    {
+        game_over_text.enabled = true;
+        quit_option.enabled = true;
     }
 
 }
