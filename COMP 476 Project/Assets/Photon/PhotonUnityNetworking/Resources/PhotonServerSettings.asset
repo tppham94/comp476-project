@@ -42,5 +42,6 @@ MonoBehaviour:
   - EnemyHP
   - Health
   - timerUpdate
+  - EnabledGameOverUI
   DisableAutoOpenWizard: 1
   ShowSettings: 1

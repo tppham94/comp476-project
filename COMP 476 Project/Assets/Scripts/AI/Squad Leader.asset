@@ -36,5 +36,5 @@ MonoBehaviour:
     type: 3}
   straight_missile_prefab: {fileID: 8919314020959483734, guid: 418fdf98d772de444b68cc6b4c4cbddf,
     type: 3}
-  homing_missile_interval: 10
-  straight_missile_interval: 1.5
+  homing_missile_interval: 15
+  straight_missile_interval: 3
