@@ -42,5 +42,6 @@ MonoBehaviour:
   - EnemyHP
   - Health
   - timerUpdate
+  - RPC_NAME
   DisableAutoOpenWizard: 1
   ShowSettings: 1
