@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class EnemyMothershipSpawn : MonoBehaviour
 {
-    //public float timeToSpawn = 20f;
-    public float timeToSpawn = 4f;
-    public int numbPlayers = 1;
+    public float timeToSpawn = 20f;
+    public int numbPlayers = PhotonRoom.room.players_in_room;
 
     private float spawnTimer;
 
@@ -25,7 +24,7 @@ public class EnemyMothershipSpawn : MonoBehaviour
     void Update()
     {
         spawnTimer -= Time.deltaTime * numbPlayers;
-        
+
         if (spawnTimer < 0 && PhotonNetwork.IsMasterClient)
         {
             GameObject a = PhotonNetwork.InstantiateSceneObject("Squad", spawnA.position, Quaternion.identity);
@@ -37,7 +36,6 @@ public class EnemyMothershipSpawn : MonoBehaviour
             a.GetComponent<SquadController>().squad_target = GameObject.FindGameObjectWithTag("Player").transform;
             b.GetComponent<SquadController>().squad_target = GameObject.FindGameObjectWithTag("Player").transform;
 
-            Debug.Log("Instantiate spawns");
 
             spawnTimer = timeToSpawn;
         }
