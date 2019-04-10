@@ -10,13 +10,13 @@ public class PlayerHealth : MonoBehaviour
     private PhotonView PV;
     public int numOfHealthBars;
     public Image[] bars;
+    private PhotonView PV;
 
 
     private void Start()
     {
         health = numOfHealthBars;
         PV = GetComponent<PhotonView>();
-
         foreach (Image o in bars)
             o.enabled = false;
     }
