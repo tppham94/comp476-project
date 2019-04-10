@@ -68,7 +68,7 @@ public class GameRules : MonoBehaviour
         if (numbMotherShips <= 0)
             WinCondition();
 
-        else if (/*numbShips*/ numbPlayers <= 0)
+        else if (numbShips  <= 0)
             LoseCondition();
 
     }
@@ -93,4 +93,5 @@ public class GameRules : MonoBehaviour
         quit_option.enabled = true;
     }
 
+   
 }
