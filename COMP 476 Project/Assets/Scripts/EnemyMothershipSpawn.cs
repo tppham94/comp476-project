@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyMothershipSpawn : MonoBehaviour
 {
-    public float timeToSpawn = 20f;
+    public float timeToSpawn = 30f;
     public int numbPlayers;
 
     private float spawnTimer;
@@ -24,7 +24,7 @@ public class EnemyMothershipSpawn : MonoBehaviour
 
     void Update()
     {
-        spawnTimer -= Time.deltaTime * numbPlayers;
+        spawnTimer -= Time.deltaTime * numbPlayers/3f;
 
         if (spawnTimer < 0 && PhotonNetwork.IsMasterClient)
         {

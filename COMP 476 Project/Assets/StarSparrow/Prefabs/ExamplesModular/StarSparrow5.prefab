@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4866f59cc8591d449d668ab15229f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSpawn: 20
+  timeToSpawn: 30
   numbPlayers: 1
   spawnA: {fileID: 7624960434226697334}
   spawnB: {fileID: 3760764712434206757}
@@ -482,6 +482,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a53b81fc6a32574c8c3347a95ecc431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  takedamage: {fileID: 0}
+  defeat: {fileID: 0}
+  deathfallposvector: {x: 1, y: -2, z: 1}
+  deathfallanglevector: {x: 1, y: 1, z: 1}
+  deathfallspeed: 50
+  deathfallanglespeed: 100
   health: 15
 --- !u!54 &6663777657466519830
 Rigidbody:
