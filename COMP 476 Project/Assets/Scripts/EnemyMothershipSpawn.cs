@@ -29,7 +29,7 @@ public class EnemyMothershipSpawn : MonoBehaviour
         if (spawnTimer < 0 && PhotonNetwork.IsMasterClient)
         {
             GameObject a = PhotonNetwork.InstantiateSceneObject("Squad", spawnA.position, Quaternion.identity);
-            GameObject b = PhotonNetwork.InstantiateSceneObject("Squad", spawnB.position, Quaternion.identity);
+            GameObject b = PhotonNetwork.InstantiateSceneObject("Squad2", spawnB.position, Quaternion.identity);
 
             a.name = "A";
             b.name = "B";

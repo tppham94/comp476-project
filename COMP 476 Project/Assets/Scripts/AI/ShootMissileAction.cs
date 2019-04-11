@@ -52,6 +52,10 @@ public class ShootMissileAction : Action
             }
             else
             {
+                if(esc.shoot_timer > esc.enemy_stats.straight_missile_interval)
+                {
+                    esc.shoot_timer = esc.enemy_stats.straight_missile_interval;
+                }
                 //SET TO PHOTONNETWORKINSTANTIATE
                 GameObject missile = PhotonNetwork.Instantiate("Enemy Ammo", esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
                 //GameObject missile = PhotonNetwork.Instantiate(esc.enemy_stats.straight_missile_prefab.name, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
