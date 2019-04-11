@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 4man
   m_EditorClassIdentifier: 
   offset_from_lead:
-  - {x: -9.4, y: 0, z: -17.2}
-  - {x: 9.4, y: 0, z: -17.2}
-  - {x: 18.8, y: 0, z: 0}
+  - {x: -37.6, y: 0, z: -17.2}
+  - {x: 37.6, y: 0, z: -17.2}
+  - {x: 75.2, y: 0, z: 0}
   taken: 000000

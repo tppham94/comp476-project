@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 2man
   m_EditorClassIdentifier: 
   offset_from_lead:
-  - {x: -17.2, y: 0, z: 0}
+  - {x: -8.6, y: 0, z: 0}
   taken: 00

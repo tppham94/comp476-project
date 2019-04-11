@@ -18,19 +18,29 @@ public class ShootMissileAction : Action
             esc = controller as EnemyStateController;
             if (/*esc.enemy_stats.homing_missile_prefab != null && */(esc.current_state.StateName.Equals("Arrive") || esc.current_state.StateName.Equals("Seek")))
             {
+
+                if (esc.shoot_timer > esc.enemy_stats.homing_missile_interval)
+                {
+                    esc.shoot_timer = esc.enemy_stats.homing_missile_interval;
+                }
                 Shoot(esc, true);
 
 
             }
             else if (/*esc.enemy_stats.straight_missile_prefab != null && */esc.current_state.StateName.Equals("Attack"))
             {
-                Shoot(esc,false);
+                if (esc.shoot_timer > esc.enemy_stats.straight_missile_interval)
+                {
+                    esc.shoot_timer = esc.enemy_stats.straight_missile_interval;
+                }
+                    Shoot(esc,false);
             }
         }
     }
 
     private void Shoot(EnemyStateController esc, bool homing)
     {
+            
         if (esc.shoot_flag)
         {
             if (homing)
@@ -52,10 +62,7 @@ public class ShootMissileAction : Action
             }
             else
             {
-                if(esc.shoot_timer > esc.enemy_stats.straight_missile_interval)
-                {
-                    esc.shoot_timer = esc.enemy_stats.straight_missile_interval;
-                }
+                
                 //SET TO PHOTONNETWORKINSTANTIATE
                 GameObject missile = PhotonNetwork.Instantiate("Enemy Ammo", esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;
                 //GameObject missile = PhotonNetwork.Instantiate(esc.enemy_stats.straight_missile_prefab.name, esc.transform.position + (esc.transform.forward) * 2f, esc.transform.rotation) as GameObject;

@@ -129,10 +129,10 @@ public class SquadController : MonoBehaviour
     }
     //flocking
 
-    float repulsionRadius = 20f;
-    float cohesionRadius = 30f;
-    float repulsionFactor = -1.25f;
-    float cohesionFactor = 1f;
+    float repulsionRadius = 7.5f;
+    float cohesionRadius = 15f;
+    float repulsionFactor = -2.5f;
+    float cohesionFactor = 1.75f;
     float speed = 3f;
     List<SquadController> squado = new List<SquadController>();
     public SquadController[] squids;
@@ -144,7 +144,7 @@ public class SquadController : MonoBehaviour
         float count = 0;
         for (int i = 0; i < squids.Length;i++)
         {
-            float dist = (squids[i].transform.position - transform.position).magnitude;
+            float dist = (squids[i].transform.position -transform.position).magnitude;
             if ( dist < radius)
             {
                 count++;
