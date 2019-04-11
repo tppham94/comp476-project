@@ -129,9 +129,9 @@ public class SquadController : MonoBehaviour
     }
     //flocking
 
-    float repulsionRadius = 20f;
-    float cohesionRadius = 30f;
-    float repulsionFactor = -1.25f;
+    float repulsionRadius = 15f;
+    float cohesionRadius = 20f;
+    float repulsionFactor = -1.75f;
     float cohesionFactor = 1f;
     float speed = 3f;
     List<SquadController> squado = new List<SquadController>();
