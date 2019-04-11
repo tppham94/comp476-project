@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 3man
   m_EditorClassIdentifier: 
   offset_from_lead:
-  - {x: -9.4, y: 0, z: -17.2}
-  - {x: 9.4, y: 0, z: -17.2}
+  - {x: -18.8, y: 0, z: -17.2}
+  - {x: 18.8, y: 0, z: -17.2}
   taken: 0000

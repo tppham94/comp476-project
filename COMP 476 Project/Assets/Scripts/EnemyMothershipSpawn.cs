@@ -24,7 +24,7 @@ public class EnemyMothershipSpawn : MonoBehaviour
 
     void Update()
     {
-        spawnTimer -= Time.deltaTime * numbPlayers/3f;
+        spawnTimer -= Time.deltaTime *Mathf.Pow(1.15f, numbPlayers);
 
         if (spawnTimer < 0 && PhotonNetwork.IsMasterClient)
         {

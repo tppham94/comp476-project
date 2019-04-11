@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4866f59cc8591d449d668ab15229f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSpawn: 30
+  timeToSpawn: 45
   numbPlayers: 1
   spawnA: {fileID: 7624960434226697334}
   spawnB: {fileID: 3760764712434206757}
