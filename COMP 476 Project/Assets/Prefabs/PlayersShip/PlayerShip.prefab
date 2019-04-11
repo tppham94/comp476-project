@@ -19383,9 +19383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d706253c25d526945a0cfd2aa80c9772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalStars: 150
+  totalStars: 200
   sizeOfEachStars: 1
-  distanceBetweenStars: 30
+  distanceBetweenStars: 150
   distanceFromPlayer: 5
 --- !u!114 &8066152013825884658
 MonoBehaviour:
