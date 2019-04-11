@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009786535, g: 0.05188808, b: 0.1522932, a: 1}
+  m_IndirectSpecularColor: {r: 0.00978638, g: 0.051889956, b: 0.15229365, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -338,6 +338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AsteroidsWhite4
       objectReference: {fileID: 0}
+    - target: {fileID: 1349504006184398, guid: c8ec12255dd543447b3fa7b151f0e3c5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4378177397613170, guid: c8ec12255dd543447b3fa7b151f0e3c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 240.07495
@@ -381,6 +385,10 @@ PrefabInstance:
     - target: {fileID: 4378177397613170, guid: c8ec12255dd543447b3fa7b151f0e3c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762647301048200, guid: c8ec12255dd543447b3fa7b151f0e3c5, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ec12255dd543447b3fa7b151f0e3c5, type: 3}
@@ -517,6 +525,10 @@ PrefabInstance:
     - target: {fileID: 4552566887329616, guid: 2350ab6df55a09f49932614f1f990d1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039010356029736, guid: 2350ab6df55a09f49932614f1f990d1e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2350ab6df55a09f49932614f1f990d1e, type: 3}
@@ -1381,6 +1393,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1107766858146636, guid: 406a191ee91dffa4a8087b39fde616b5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213601265750094, guid: 406a191ee91dffa4a8087b39fde616b5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406a191ee91dffa4a8087b39fde616b5, type: 3}
 --- !u!1001 &499311647
@@ -1393,6 +1413,10 @@ PrefabInstance:
     - target: {fileID: 1188757610815136, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
       propertyPath: m_Name
       value: ShipDebris1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188757610815136, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4504925717005752, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1438,6 +1462,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1092938374316870, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360426149456016, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001830381453460, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931406286995344, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
 --- !u!4 &499311648 stripped
@@ -1456,6 +1496,10 @@ PrefabInstance:
     - target: {fileID: 1382117583398658, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
       propertyPath: m_Name
       value: AsteroidsGrey6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382117583398658, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4001960195862898, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1500,6 +1544,10 @@ PrefabInstance:
     - target: {fileID: 4001960195862898, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786260627175264, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
@@ -1711,6 +1759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Debris6
       objectReference: {fileID: 0}
+    - target: {fileID: 1510664117730166, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4869422924104108, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.104542
@@ -1754,6 +1806,26 @@ PrefabInstance:
     - target: {fileID: 4869422924104108, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686737509489270, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956397323431630, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879374118681024, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675466257659632, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142862195687332, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
@@ -1875,6 +1947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipDebris1
       objectReference: {fileID: 0}
+    - target: {fileID: 1188757610815136, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4504925717005752, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -133.97635
@@ -1918,6 +1994,22 @@ PrefabInstance:
     - target: {fileID: 4504925717005752, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092938374316870, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360426149456016, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001830381453460, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931406286995344, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
@@ -2064,6 +2156,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1301354034391002, guid: d8816070ca931b44e8f6f277ac8ac457, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8816070ca931b44e8f6f277ac8ac457, type: 3}
 --- !u!1001 &669422329
@@ -2076,6 +2172,10 @@ PrefabInstance:
     - target: {fileID: 1670538445574650, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
       propertyPath: m_Name
       value: AsteroidBrown1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670538445574650, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4737120948214586, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2120,6 +2220,10 @@ PrefabInstance:
     - target: {fileID: 4737120948214586, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092906231251028, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
@@ -2225,6 +2329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Debris6 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1510664117730166, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4869422924104108, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43
@@ -2268,6 +2376,26 @@ PrefabInstance:
     - target: {fileID: 4869422924104108, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686737509489270, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956397323431630, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879374118681024, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675466257659632, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142862195687332, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52afb14bca9fe2e44ae7bf081a0da098, type: 3}
@@ -2337,6 +2465,10 @@ PrefabInstance:
     - target: {fileID: 4945662063421126, guid: 5aab4790181406d4f8532626b62e6f24, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573424080541136, guid: 5aab4790181406d4f8532626b62e6f24, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aab4790181406d4f8532626b62e6f24, type: 3}
@@ -2526,6 +2658,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1954033456073114, guid: aa51193cf20b60448ad4b2ff57fbfd24, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa51193cf20b60448ad4b2ff57fbfd24, type: 3}
 --- !u!1 &809774248
@@ -2646,6 +2782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate3
       objectReference: {fileID: 0}
+    - target: {fileID: 1728232205184668, guid: 55fabb8f84e57114c811c90a3ee55cee, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4992993486085754, guid: 55fabb8f84e57114c811c90a3ee55cee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -207.81784
@@ -2690,6 +2830,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1634384661924664, guid: 55fabb8f84e57114c811c90a3ee55cee, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55fabb8f84e57114c811c90a3ee55cee, type: 3}
 --- !u!4 &853649572 stripped
@@ -2708,6 +2852,10 @@ PrefabInstance:
     - target: {fileID: 1718657398631634, guid: 68780bfd56918e94ca636d71b736c799, type: 3}
       propertyPath: m_Name
       value: AsteroidBrown2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718657398631634, guid: 68780bfd56918e94ca636d71b736c799, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4072264437592862, guid: 68780bfd56918e94ca636d71b736c799, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2752,6 +2900,10 @@ PrefabInstance:
     - target: {fileID: 4072264437592862, guid: 68780bfd56918e94ca636d71b736c799, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582262632839542, guid: 68780bfd56918e94ca636d71b736c799, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68780bfd56918e94ca636d71b736c799, type: 3}
@@ -2815,6 +2967,14 @@ PrefabInstance:
     - target: {fileID: 4407721621209292, guid: 406a191ee91dffa4a8087b39fde616b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1107766858146636, guid: 406a191ee91dffa4a8087b39fde616b5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213601265750094, guid: 406a191ee91dffa4a8087b39fde616b5, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406a191ee91dffa4a8087b39fde616b5, type: 3}
@@ -3023,7 +3183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 984627212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Asteroids
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3128,6 +3288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipDebris1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1188757610815136, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4504925717005752, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 226.226
@@ -3171,6 +3335,22 @@ PrefabInstance:
     - target: {fileID: 4504925717005752, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092938374316870, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360426149456016, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001830381453460, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931406286995344, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0f4ff3c40adc346acbc422c3bbb2e3, type: 3}
@@ -3688,6 +3868,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1079646058796160, guid: 66c4acccd15da594b816083da0ff8974, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c4acccd15da594b816083da0ff8974, type: 3}
 --- !u!1001 &1102505750
@@ -3700,6 +3884,10 @@ PrefabInstance:
     - target: {fileID: 1382117583398658, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
       propertyPath: m_Name
       value: AsteroidsGrey6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382117583398658, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4001960195862898, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3745,6 +3933,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1786260627175264, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c75521a60dfc7de48ba2feb45eb34abe, type: 3}
 --- !u!1001 &1104149482
@@ -3757,6 +3949,10 @@ PrefabInstance:
     - target: {fileID: 1214146212692714, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
       propertyPath: m_Name
       value: Debris1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214146212692714, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4840101424908830, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3801,6 +3997,14 @@ PrefabInstance:
     - target: {fileID: 4840101424908830, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509805384968982, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240240306845838, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
@@ -4308,6 +4512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AsteroidsWhite7
       objectReference: {fileID: 0}
+    - target: {fileID: 1329729191561392, guid: 54fcfe309c0b24e4f96519be4bb149ca, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4961999444534036, guid: 54fcfe309c0b24e4f96519be4bb149ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -420.30798
@@ -4351,6 +4559,10 @@ PrefabInstance:
     - target: {fileID: 4961999444534036, guid: 54fcfe309c0b24e4f96519be4bb149ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327179727933776, guid: 54fcfe309c0b24e4f96519be4bb149ca, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54fcfe309c0b24e4f96519be4bb149ca, type: 3}
@@ -4464,6 +4676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AsteroidsWhite6
       objectReference: {fileID: 0}
+    - target: {fileID: 1724678935242462, guid: 94a37146bc6ce8343903fa9be2177ca3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4746928886595388, guid: 94a37146bc6ce8343903fa9be2177ca3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.42639
@@ -4507,6 +4723,10 @@ PrefabInstance:
     - target: {fileID: 4746928886595388, guid: 94a37146bc6ce8343903fa9be2177ca3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376522205918678, guid: 94a37146bc6ce8343903fa9be2177ca3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94a37146bc6ce8343903fa9be2177ca3, type: 3}
@@ -4779,6 +4999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipDebris5
       objectReference: {fileID: 0}
+    - target: {fileID: 1955561091394868, guid: d4d9a65fc1e362948a1bb54965e1e5fc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4786748953778190, guid: d4d9a65fc1e362948a1bb54965e1e5fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 312.67453
@@ -4823,6 +5047,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1880959162973174, guid: d4d9a65fc1e362948a1bb54965e1e5fc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944047165148816, guid: d4d9a65fc1e362948a1bb54965e1e5fc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309205864615770, guid: d4d9a65fc1e362948a1bb54965e1e5fc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623111405923862, guid: d4d9a65fc1e362948a1bb54965e1e5fc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656626250655424, guid: d4d9a65fc1e362948a1bb54965e1e5fc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d9a65fc1e362948a1bb54965e1e5fc, type: 3}
 --- !u!4 &1432978053 stripped
@@ -4841,6 +5085,10 @@ PrefabInstance:
     - target: {fileID: 1214146212692714, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
       propertyPath: m_Name
       value: Debris1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214146212692714, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4840101424908830, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4885,6 +5133,14 @@ PrefabInstance:
     - target: {fileID: 4840101424908830, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509805384968982, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240240306845838, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8fe57f664da0154fb8ec22452494ab8, type: 3}
@@ -4955,6 +5211,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1540979908698550, guid: 147e5c05fdac5cf419bf696baaebed26, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003659737977272, guid: 147e5c05fdac5cf419bf696baaebed26, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457968397394566, guid: 147e5c05fdac5cf419bf696baaebed26, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237931751815216, guid: 147e5c05fdac5cf419bf696baaebed26, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117682604587000, guid: 147e5c05fdac5cf419bf696baaebed26, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 147e5c05fdac5cf419bf696baaebed26, type: 3}
 --- !u!4 &1494637305 stripped
@@ -5018,6 +5294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1284472479788946, guid: 4f513642b52a10844839820ab25d1f4c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f513642b52a10844839820ab25d1f4c, type: 3}
 --- !u!1 &1548139232
@@ -5029,7 +5309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1548139233}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5207,6 +5487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AsteroidsGrey4
       objectReference: {fileID: 0}
+    - target: {fileID: 1918172603323870, guid: a97aaf6f95fb1c942ae8bd7c4ff285a9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4456541390689886, guid: a97aaf6f95fb1c942ae8bd7c4ff285a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 494.7439
@@ -5250,6 +5534,10 @@ PrefabInstance:
     - target: {fileID: 4456541390689886, guid: a97aaf6f95fb1c942ae8bd7c4ff285a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781366371942732, guid: a97aaf6f95fb1c942ae8bd7c4ff285a9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a97aaf6f95fb1c942ae8bd7c4ff285a9, type: 3}
@@ -5392,6 +5680,10 @@ PrefabInstance:
     - target: {fileID: 4552566887329616, guid: 2350ab6df55a09f49932614f1f990d1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039010356029736, guid: 2350ab6df55a09f49932614f1f990d1e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2350ab6df55a09f49932614f1f990d1e, type: 3}
@@ -5537,6 +5829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StationDebris10
       objectReference: {fileID: 0}
+    - target: {fileID: 1108767006371500, guid: b30943d54e7b5024c97dfa03368d3fac, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4667329298987256, guid: b30943d54e7b5024c97dfa03368d3fac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 154.18553
@@ -5580,6 +5876,14 @@ PrefabInstance:
     - target: {fileID: 4667329298987256, guid: b30943d54e7b5024c97dfa03368d3fac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282891461280936, guid: b30943d54e7b5024c97dfa03368d3fac, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076846649445436, guid: b30943d54e7b5024c97dfa03368d3fac, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b30943d54e7b5024c97dfa03368d3fac, type: 3}
@@ -5679,6 +5983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Debris9
       objectReference: {fileID: 0}
+    - target: {fileID: 1171528274208348, guid: 3f1f49ec9ec13104185d437622e9db7b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4687880095979612, guid: 3f1f49ec9ec13104185d437622e9db7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 326.18213
@@ -5722,6 +6030,18 @@ PrefabInstance:
     - target: {fileID: 4687880095979612, guid: 3f1f49ec9ec13104185d437622e9db7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189225567956618, guid: 3f1f49ec9ec13104185d437622e9db7b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913743107570768, guid: 3f1f49ec9ec13104185d437622e9db7b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648152911647550, guid: 3f1f49ec9ec13104185d437622e9db7b, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f1f49ec9ec13104185d437622e9db7b, type: 3}
@@ -5779,6 +6099,10 @@ PrefabInstance:
     - target: {fileID: 4653888359567994, guid: d8816070ca931b44e8f6f277ac8ac457, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301354034391002, guid: d8816070ca931b44e8f6f277ac8ac457, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8816070ca931b44e8f6f277ac8ac457, type: 3}
@@ -6128,6 +6452,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1954033456073114, guid: aa51193cf20b60448ad4b2ff57fbfd24, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa51193cf20b60448ad4b2ff57fbfd24, type: 3}
 --- !u!4 &2008870735 stripped
@@ -6264,6 +6592,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1284472479788946, guid: 4f513642b52a10844839820ab25d1f4c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f513642b52a10844839820ab25d1f4c, type: 3}
 --- !u!1001 &2028259059
@@ -6276,6 +6608,10 @@ PrefabInstance:
     - target: {fileID: 1241585954841234, guid: 26df4ef881a06af47b1ed2db0ac6f13c, type: 3}
       propertyPath: m_Name
       value: AsteroidsWhite5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241585954841234, guid: 26df4ef881a06af47b1ed2db0ac6f13c, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4280861700776384, guid: 26df4ef881a06af47b1ed2db0ac6f13c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6320,6 +6656,10 @@ PrefabInstance:
     - target: {fileID: 4280861700776384, guid: 26df4ef881a06af47b1ed2db0ac6f13c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705269124250274, guid: 26df4ef881a06af47b1ed2db0ac6f13c, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26df4ef881a06af47b1ed2db0ac6f13c, type: 3}
@@ -6480,6 +6820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AsteroidBrown1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1670538445574650, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4737120948214586, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -119
@@ -6523,6 +6867,10 @@ PrefabInstance:
     - target: {fileID: 4737120948214586, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092906231251028, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cbe6c492f2da347a243c5d939e654f, type: 3}

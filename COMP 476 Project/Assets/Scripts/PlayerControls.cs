@@ -8,7 +8,7 @@ public class PlayerControls : MonoBehaviour
     private PhotonView PV;
     public Rigidbody _rb;
     public float movementSpeed = 1;
-    public float maxSpeed = 100;
+    public float maxSpeed = 50;
     public float decelerationTime = 1f;
 
     public float mouseSpeed = 6f;

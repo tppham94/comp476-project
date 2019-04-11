@@ -52,7 +52,7 @@ public class EnemyStateController : StateController
     }
     //for shoot intervals
 
-    [HideInInspector] public float shoot_timer = 3;
+    [HideInInspector] public float shoot_timer = 5;
   
 
     [HideInInspector] public bool shoot_flag = false;
