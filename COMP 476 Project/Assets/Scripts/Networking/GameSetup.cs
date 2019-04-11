@@ -12,13 +12,11 @@ public class GameSetup : MonoBehaviour
 
     public static GameSetup GS;
     public Transform[] spawn_positions;
-
     #endregion
     // Start is called before the first frame update
     void Start()
     {
         PV = GetComponent<PhotonView>();
-
     }
 
     // Update is called once per frame
@@ -38,6 +36,8 @@ public class GameSetup : MonoBehaviour
     public void DisconnectPlayer()
     {
         StartCoroutine(DisconnectAndLoad());
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     IEnumerator DisconnectAndLoad()
