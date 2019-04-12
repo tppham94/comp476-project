@@ -55,6 +55,7 @@ public class EnemyMothershipHealth : MonoBehaviour
         //{
             if(health <= 0 && !destroyed)
             {
+                this.gameObject.GetComponent<TimedDeath>().enabled = true;
                 audioSource.volume = 4.0f;
                 audioSource.pitch = 0.5f;
                 audioSource.PlayOneShot(defeat);

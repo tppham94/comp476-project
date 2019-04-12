@@ -406,6 +406,7 @@ GameObject:
   - component: {fileID: 1371965333161681160}
   - component: {fileID: 6663777657466519830}
   - component: {fileID: 6994495773506315032}
+  - component: {fileID: 8176372998469800042}
   m_Layer: 9
   m_Name: StarSparrow5
   m_TagString: mothership
@@ -527,6 +528,19 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &8176372998469800042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322182638669642}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc02ffd45e35d54095cf374a21fb4ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimer: 4
 --- !u!1 &1429159266949172
 GameObject:
   m_ObjectHideFlags: 0
