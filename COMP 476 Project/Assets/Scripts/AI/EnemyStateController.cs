@@ -22,6 +22,8 @@ public class EnemyStateController : StateController
     public AudioClip laserHit;
     public AudioClip fireLaser;
     public AudioClip shipDestroy;
+    [SerializeField]
+    GameObject explosion;
     PhotonView PV;
     public void Start()
     {
@@ -73,6 +75,7 @@ public class EnemyStateController : StateController
 
             if (collision.gameObject.tag=="Player")
             {
+                GameObject explode = Instantiate(explosion, transform.position, Quaternion.identity);
                 //Damage player
                 audioSource.PlayOneShot(laserHit);
                 collision.gameObject.GetComponent<PlayerHealth>().TakeDamage();

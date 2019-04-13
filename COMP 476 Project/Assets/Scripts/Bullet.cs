@@ -11,7 +11,9 @@ public class Bullet : MonoBehaviour
     public AudioClip laserHit;
     public AudioClip fireLaser;
     public AudioClip shipDestroy;
-    //public int thing;
+
+    [SerializeField]
+    GameObject explosion;
     private PhotonView PV;
     private void Start()
     {
@@ -38,6 +40,7 @@ public class Bullet : MonoBehaviour
             if (collision.gameObject.tag == "mothership")
             {
                 collision.gameObject.GetComponent<EnemyMothershipHealth>().GetDamage();
+                GameObject explode = Instantiate(explosion, transform.position, Quaternion.identity);
                 PhotonNetwork.Destroy(gameObject);
 
             }
@@ -50,7 +53,9 @@ public class Bullet : MonoBehaviour
                 {
                     esc_script.TakeDamage();
                     audioSource.PlayOneShot(laserHit);
+
                 }
+                GameObject explode = Instantiate(explosion, transform.position, Quaternion.identity);
                 audioSource.PlayOneShot(shipDestroy);
                 PhotonNetwork.Destroy(gameObject);
 
