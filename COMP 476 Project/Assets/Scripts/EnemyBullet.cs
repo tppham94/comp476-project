@@ -12,6 +12,8 @@ public class EnemyBullet : MonoBehaviour
     public AudioClip fireLaser;
     public AudioClip shipDestroy;
 
+    [SerializeField]
+    GameObject explosion;
     PhotonView PV;
 
     private void Start()
@@ -33,7 +35,8 @@ public class EnemyBullet : MonoBehaviour
 
             if (collision.gameObject.tag == "Player")
             {
-                 //Damage player
+                //Damage player
+                GameObject explode = Instantiate(explosion, transform.position, Quaternion.identity);
                 audioSource.PlayOneShot(laserHit);
                 collision.gameObject.GetComponent<PlayerHealth>().TakeDamage();
                 PhotonNetwork.Destroy(this.gameObject);
